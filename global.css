@@ -1,0 +1,106 @@
+@font-face {
+	font-family: "Bellefair Regular";
+	src: url("./public/Bellefair-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Barlow Condensed Regular";
+	src: url("./public/BarlowCondensed-Regular.ttf") format("truetype");
+}
+
+:root {
+	--c-black: 11, 13, 23;
+	--c-blue: 208, 214, 249;
+	--c-white: 255, 255, 255;
+
+	--ff-body: sans-serif;
+	--ff-heading-primary: "Bellefair Regular", serif;
+	--ff-heading-secondary: "Barlow Condensed Regular", sans-serif;
+
+	--fz-xs: 14px;
+	--fz-sm: 16px;
+	--fz-base: 1rem;
+	--fz-md: 20px;
+	--fz-lg: 24px;
+	--fz-xl: 28px;
+	--fz-xxl: 32px;
+	--fz-xxxl: 36px;
+
+	@media screen and (min-width: 700px) {
+		--fz-md: 28px;
+		--fz-lg: 32px;
+		--fz-xl: 56px;
+		--fz-xxl: 100px;
+		--fz-xxxl: 150px;
+	}
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	padding: unset;
+	margin: unset;
+	font-family: var(--ff-body);
+	font-size: var(--fz-base);
+	line-height: 1.5;
+	background-color: rgb(var(--c-black));
+	color: rgb(var(--c-white));
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: var(--ff-heading-primary);
+}
+
+h1 {
+	font-size: var(--fz-xxxl);
+}
+
+h2 {
+	font-size: var(--fz-xxl);
+}
+
+h3 {
+	font-size: var(--fz-xl);
+}
+
+h4 {
+	font-size: var(--fz-lg);
+}
+
+h5 {
+	font-family: var(--ff-heading-secondary);
+	font-size: var(--fz-md);
+	letter-spacing: 0.475em;
+}
+
+.text-subheading1 {
+	font-family: var(--ff-heading-primary);
+	font-size: var(--fz-md);
+}
+
+.text-subheading2 {
+	font-family: var(--ff-heading-secondary);
+	font-size: var(--fz-xs);
+	letter-spacing: 0.235em;
+}
+
+.text-nav {
+	font-family: var(--ff-heading-secondary);
+	font-size: var(--fz-sm);
+	letter-spacing: 0.27em;
+}
+
+a {
+	color: inherit;
+}

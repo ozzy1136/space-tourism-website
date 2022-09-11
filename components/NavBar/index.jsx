@@ -36,22 +36,30 @@ export default function NavBar() {
 					<ol className={styles.navList}>
 						<li className={`text-nav ${styles.navListItem}`}>
 							<Link href="/">
-								<a>Home</a>
+								<a onClick={() => dialog.current.hide()}>
+									Home
+								</a>
 							</Link>
 						</li>
 						<li className={`text-nav ${styles.navListItem}`}>
 							<Link href="/destination">
-								<a>Destination</a>
+								<a onClick={() => dialog.current.hide()}>
+									Destination
+								</a>
 							</Link>
 						</li>
 						<li className={`text-nav ${styles.navListItem}`}>
 							<Link href="/crew">
-								<a>Crew</a>
+								<a onClick={() => dialog.current.hide()}>
+									Crew
+								</a>
 							</Link>
 						</li>
 						<li className={`text-nav ${styles.navListItem}`}>
 							<Link href="/technology">
-								<a>Technology</a>
+								<a onClick={() => dialog.current.hide()}>
+									Technology
+								</a>
 							</Link>
 						</li>
 					</ol>

@@ -1,0 +1,97 @@
+.wrapper {
+	grid-column-end: wrapper-end;
+}
+
+.hamburgerToggle {
+	background: unset;
+	border: unset;
+	min-width: 44px;
+	min-height: 44px;
+}
+
+.hamburgerToggleClose {
+	position: absolute;
+	right: 10vw;
+	top: 5vh;
+}
+
+.hamburgerWrapper,
+.hamburgerOverlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+
+.hamburgerWrapper {
+	z-index: 2;
+	transition: visibility 0.4s ease-in;
+}
+
+.hamburgerWrapper[aria-hidden="true"] {
+	visibility: hidden;
+}
+
+.hamburgerDialog {
+	width: 70%;
+	height: 100%;
+	background-color: rgba(var(--c-black), 0.3);
+	backdrop-filter: blur(10px);
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding-inline: 10vw;
+	transition: right 0.4s ease-in;
+}
+
+.hamburgerWrapper[aria-hidden="true"] > .hamburgerDialog {
+	right: -100%;
+}
+
+.hamburgerTitle {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+.navList {
+	padding-inline-start: unset;
+	margin-block-start: 20vh;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	row-gap: 1em;
+	list-style-type: none;
+	counter-reset: list-item -1;
+	position: relative;
+	z-index: 1;
+}
+
+.navListItem {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	counter-increment: list-item;
+}
+
+.navListItem::before {
+	font-weight: bold;
+	padding-inline-end: 0.6em;
+	content: counter(list-item, decimal-leading-zero);
+}
+
+.navList a {
+	text-decoration: none;
+	text-transform: uppercase;
+	min-width: 44px;
+	min-height: 44px;
+	display: flex;
+	align-items: center;
+}

@@ -8,6 +8,10 @@
 	src: url("./public/BarlowCondensed-Regular.ttf") format("truetype");
 }
 
+@custom-media --viewport-mobile (width < 649px);
+@custom-media --viewport-tablet (width > 650px);
+@custom-media --viewport-desktop (width > 1000px);
+
 :root {
 	--c-black: 11, 13, 23;
 	--c-blue: 208, 214, 249;
@@ -103,4 +107,19 @@ h5 {
 
 a {
 	color: inherit;
+}
+
+.l-section-wrapper {
+	--content-columns: 1fr;
+
+	display: grid;
+	grid-template-columns:
+		[full-start] 10vw [wrapper-start] var(--content-columns)
+		[wrapper-end] 10vw [full-end];
+}
+
+.l-center-children {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }

@@ -10,7 +10,9 @@ export default function NavMenu({ classNames, dialogRef }) {
 					<Link href="/">
 						<a
 							className={`${styles.navLink} ${classNames.navLink}`}
-							onClick={() => dialogRef.current.hide()}
+							onClick={() =>
+								dialogRef && dialogRef.current.hide()
+							}
 						>
 							Home
 						</a>
@@ -20,7 +22,9 @@ export default function NavMenu({ classNames, dialogRef }) {
 					<Link href="/destination">
 						<a
 							className={`${styles.navLink} ${classNames.navLink}`}
-							onClick={() => dialogRef.current.hide()}
+							onClick={() =>
+								dialogRef && dialogRef.current.hide()
+							}
 						>
 							Destination
 						</a>
@@ -30,7 +34,9 @@ export default function NavMenu({ classNames, dialogRef }) {
 					<Link href="/crew">
 						<a
 							className={`${styles.navLink} ${classNames.navLink}`}
-							onClick={() => dialogRef.current.hide()}
+							onClick={() =>
+								dialogRef && dialogRef.current.hide()
+							}
 						>
 							Crew
 						</a>
@@ -40,7 +46,9 @@ export default function NavMenu({ classNames, dialogRef }) {
 					<Link href="/technology">
 						<a
 							className={`${styles.navLink} ${classNames.navLink}`}
-							onClick={() => dialogRef.current.hide()}
+							onClick={() =>
+								dialogRef && dialogRef.current.hide()
+							}
 						>
 							Technology
 						</a>

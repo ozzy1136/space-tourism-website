@@ -8,9 +8,9 @@
 	src: url("./public/BarlowCondensed-Regular.ttf") format("truetype");
 }
 
-@custom-media --viewport-mobile (width < 649px);
-@custom-media --viewport-tablet (width > 650px);
-@custom-media --viewport-desktop (width > 1000px);
+@custom-media --viewport-mobile (width < 699px);
+@custom-media --viewport-tablet (width >= 700px);
+@custom-media --viewport-desktop (width >= 1000px);
 
 :root {
 	--c-black: 11, 13, 23;
@@ -117,6 +117,14 @@ a {
 	grid-template-columns:
 		[full-start] var(--page-gap-size) [wrapper-start] var(--content-columns)
 		[wrapper-end] var(--page-gap-size) [full-end];
+
+	@media (--viewport-tablet) {
+		--page-gap-size: 7vw;
+	}
+
+	@media (--viewport-desktop) {
+		--page-gap-size: 14vw;
+	}
 }
 
 .l-center-children {

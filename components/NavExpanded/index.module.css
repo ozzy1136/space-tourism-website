@@ -1,0 +1,25 @@
+.wrapper {
+	display: none;
+
+	/* TODO figure out how negative margin can push nav menu to top of page */
+	@media (--viewport-tablet) {
+		display: flex;
+		align-items: center;
+		grid-column: 3 / full-end;
+		justify-self: flex-end;
+		height: 100%;
+		/* margin-block-start: calc(var(--header-padding-inline-start) * -1); */
+		/* padding-block-start: var(--header-padding-inline-start); */
+		padding-inline-end: var(--page-gap-size);
+		background-color: rgb(var(--c-white));
+	}
+}
+
+.navList {
+	margin: unset;
+	padding: unset;
+	display: flex;
+	flex-direction: row;
+	column-gap: 1.5em;
+	list-style-type: none;
+}

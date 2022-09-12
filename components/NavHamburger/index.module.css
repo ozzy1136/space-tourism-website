@@ -1,9 +1,16 @@
 .wrapper {
 	grid-column-end: wrapper-end;
+	display: flex;
+	justify-content: flex-end;
+
+	@media (--viewport-tablet) {
+		display: none;
+	}
 }
 
 .hamburgerToggle {
 	background: unset;
+	padding: unset;
 	border: unset;
 	min-width: 44px;
 	min-height: 44px;
@@ -25,8 +32,14 @@
 }
 
 .hamburgerWrapper {
+	--transition-duration: 0.3s;
+
 	z-index: 2;
-	transition: visibility 0.4s ease-in;
+	transition: visibility var(--transition-duration) ease-in;
+
+	@media (--viewport-tablet) {
+		display: none;
+	}
 }
 
 .hamburgerWrapper[aria-hidden="true"] {
@@ -42,7 +55,7 @@
 	top: 0;
 	right: 0;
 	padding-inline: 10vw;
-	transition: right 0.4s ease-in;
+	transition: right var(--transition-duration) ease-in;
 }
 
 .hamburgerWrapper[aria-hidden="true"] > .hamburgerDialog {
@@ -85,13 +98,4 @@
 	font-weight: bold;
 	padding-inline-end: 0.6em;
 	content: counter(list-item, decimal-leading-zero);
-}
-
-.navList a {
-	text-decoration: none;
-	text-transform: uppercase;
-	min-width: 44px;
-	min-height: 44px;
-	display: flex;
-	align-items: center;
 }

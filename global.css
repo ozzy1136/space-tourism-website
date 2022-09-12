@@ -111,11 +111,12 @@ a {
 
 .l-section-wrapper {
 	--content-columns: 1fr;
+	--page-gap-size: 10vw;
 
 	display: grid;
 	grid-template-columns:
-		[full-start] 10vw [wrapper-start] var(--content-columns)
-		[wrapper-end] 10vw [full-end];
+		[full-start] var(--page-gap-size) [wrapper-start] var(--content-columns)
+		[wrapper-end] var(--page-gap-size) [full-end];
 }
 
 .l-center-children {

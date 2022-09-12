@@ -1,17 +1,37 @@
 .wrapper {
 	display: none;
 
-	/* TODO figure out how negative margin can push nav menu to top of page */
 	@media (--viewport-tablet) {
 		display: flex;
 		align-items: center;
-		grid-column: 3 / full-end;
+		grid-column: span 2 / full-end;
+		grid-row: 1 / span 3;
 		justify-self: flex-end;
 		height: 100%;
-		/* margin-block-start: calc(var(--header-padding-inline-start) * -1); */
-		/* padding-block-start: var(--header-padding-inline-start); */
-		padding-inline-end: var(--page-gap-size);
-		background-color: rgb(var(--c-white));
+		padding-block: 6vh;
+		padding-inline: var(--page-gap-size);
+		background-color: rgb(var(--c-white), 0.04);
+		backdrop-filter: blur(20px);
+	}
+
+	@media (--viewport-desktop) {
+		grid-column-start: span 3;
+		padding-inline: 8vw;
+	}
+}
+
+.desktopHeaderLine {
+	display: none;
+
+	@media (--viewport-desktop) {
+		display: block;
+		grid-column: wrapper-start / span 2;
+		grid-row-start: 2;
+		width: 100%;
+		height: 1px;
+		background-color: rgba(var(--c-white), 0.25);
+		position: relative;
+		z-index: 1;
 	}
 }
 
@@ -22,4 +42,26 @@
 	flex-direction: row;
 	column-gap: 1.5em;
 	list-style-type: none;
+	counter-reset: list-item -1;
+
+	@media (--viewport-desktop) {
+		column-gap: 2.5em;
+	}
+}
+
+.navListItem {
+	@media (--viewport-desktop) {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		counter-increment: list-item;
+	}
+}
+
+.navListItem::before {
+	@media (--viewport-desktop) {
+		font-weight: bold;
+		padding-inline-end: 0.6em;
+		content: counter(list-item, decimal-leading-zero);
+	}
 }

@@ -1,18 +1,34 @@
 .wrapper {
 	--content-columns: 1fr minmax(44px, 1fr);
-	--header-padding-inline-start: 5vh;
+	--header-padding-block-start: 5vh;
 
-	padding-block-start: var(--header-padding-inline-start);
+	padding-block-start: var(--header-padding-block-start);
 	align-items: center;
 
 	@media (--viewport-tablet) {
 		--content-columns: 1fr 4fr;
+
+		--header-padding-block-start: 0px;
+	}
+
+	@media (--viewport-desktop) {
+		--content-columns: 1fr 4vw auto;
+		--header-padding-block-start: 4vh;
 	}
 }
 
 .logoWrapper {
 	grid-column-start: wrapper-start;
 	display: flex;
+
+	@media (--viewport-tablet) {
+		grid-row-start: 2;
+	}
+
+	@media (--viewport-desktop) {
+		grid-column-start: full-start;
+		justify-content: center;
+	}
 }
 
 .logoSVG {
@@ -20,6 +36,6 @@
 	aspect-ratio: 1;
 
 	@media (--viewport-tablet) {
-		height: 4em;
+		height: 3em;
 	}
 }

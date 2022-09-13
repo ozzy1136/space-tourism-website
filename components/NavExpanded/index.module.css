@@ -2,13 +2,15 @@
 	display: none;
 
 	@media (--viewport-tablet) {
+		--nav-padding-block: 4vh;
+
 		display: flex;
 		align-items: center;
 		grid-column: span 2 / full-end;
 		grid-row: 1 / span 3;
 		justify-self: flex-end;
 		height: 100%;
-		padding-block: 6vh;
+		padding-block: var(--nav-padding-block);
 		padding-inline: var(--page-gap-size);
 		background-color: rgb(var(--c-white), 0.04);
 		backdrop-filter: blur(20px);
@@ -50,6 +52,10 @@
 }
 
 .navListItem {
+	@media (--viewport-tablet) {
+		position: relative;
+	}
+
 	@media (--viewport-desktop) {
 		display: flex;
 		flex-direction: row;
@@ -63,5 +69,29 @@
 		font-weight: bold;
 		padding-inline-end: 0.6em;
 		content: counter(list-item, decimal-leading-zero);
+	}
+}
+
+@media (any-pointer: fine) {
+	.navLink[aria-current="page"]::after {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 3px;
+		position: absolute;
+		left: 0px;
+		bottom: calc(var(--nav-padding-block) * -1);
+		background-color: rgb(var(--c-white));
+	}
+
+	.navLink[aria-current="false"]:hover::after {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 3px;
+		position: absolute;
+		left: 0px;
+		bottom: calc(var(--nav-padding-block) * -1);
+		background-color: rgba(var(--c-white), 0.5);
 	}
 }

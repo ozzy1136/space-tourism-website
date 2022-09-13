@@ -11,6 +11,7 @@ export default function NavExpanded() {
 					navWrapper: `${styles.wrapper}`,
 					navList: `${styles.navList}`,
 					navListItem: `${styles.navListItem}`,
+					navLink: `${styles.navLink}`,
 				}}
 			/>
 		</>

@@ -1,17 +1,25 @@
 import styles from "./index.module.css";
 
+import { useRouter } from "next/router";
 import Link from "next/link";
 
 export default function NavMenu({ classNames, dialogRef }) {
+	const router = useRouter();
+
 	return (
 		<nav className={classNames.navWrapper}>
 			<ol className={classNames.navList}>
 				<li className={`text-nav ${classNames.navListItem}`}>
 					<Link href="/">
 						<a
-							className={`${styles.navLink} ${classNames.navLink}`}
+							className={`${styles.navLink} ${
+								classNames.navLink ? classNames.navLink : ""
+							}`}
 							onClick={() =>
 								dialogRef && dialogRef.current.hide()
+							}
+							aria-current={
+								router.pathname === "/" ? "page" : false
 							}
 						>
 							Home
@@ -21,9 +29,16 @@ export default function NavMenu({ classNames, dialogRef }) {
 				<li className={`text-nav ${classNames.navListItem}`}>
 					<Link href="/destination">
 						<a
-							className={`${styles.navLink} ${classNames.navLink}`}
+							className={`${styles.navLink} ${
+								classNames.navLink ? classNames.navLink : ""
+							}`}
 							onClick={() =>
 								dialogRef && dialogRef.current.hide()
+							}
+							aria-current={
+								router.pathname.startsWith("/destination")
+									? "page"
+									: false
 							}
 						>
 							Destination
@@ -33,9 +48,16 @@ export default function NavMenu({ classNames, dialogRef }) {
 				<li className={`text-nav ${classNames.navListItem}`}>
 					<Link href="/crew">
 						<a
-							className={`${styles.navLink} ${classNames.navLink}`}
+							className={`${styles.navLink} ${
+								classNames.navLink ? classNames.navLink : ""
+							}`}
 							onClick={() =>
 								dialogRef && dialogRef.current.hide()
+							}
+							aria-current={
+								router.pathname.startsWith("/crew")
+									? "page"
+									: false
 							}
 						>
 							Crew
@@ -45,9 +67,16 @@ export default function NavMenu({ classNames, dialogRef }) {
 				<li className={`text-nav ${classNames.navListItem}`}>
 					<Link href="/technology">
 						<a
-							className={`${styles.navLink} ${classNames.navLink}`}
+							className={`${styles.navLink} ${
+								classNames.navLink ? classNames.navLink : ""
+							}`}
 							onClick={() =>
 								dialogRef && dialogRef.current.hide()
+							}
+							aria-current={
+								router.pathname.startsWith("/technology")
+									? "page"
+									: false
 							}
 						>
 							Technology

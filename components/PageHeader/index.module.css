@@ -1,19 +1,19 @@
 .wrapper {
 	--content-columns: 1fr minmax(44px, 1fr);
-	--header-padding-block-start: 5vh;
+	--header-padding-block: 5vh;
 
-	padding-block-start: var(--header-padding-block-start);
+	padding-block-start: var(--header-padding-block);
 	align-items: center;
 
 	@media (--viewport-tablet) {
 		--content-columns: 1fr 4fr;
 
-		--header-padding-block-start: 0px;
+		--header-padding-block: 0px;
 	}
 
 	@media (--viewport-desktop) {
 		--content-columns: 1fr 4vw auto;
-		--header-padding-block-start: 4vh;
+		--header-padding-block: 4vh;
 	}
 }
 

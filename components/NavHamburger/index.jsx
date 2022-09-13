@@ -35,6 +35,7 @@ export default function NavBar() {
 					classNames={{
 						navList: `${styles.navList}`,
 						navListItem: `${styles.navListItem}`,
+						navLink: `${styles.navLink}`,
 					}}
 					dialogRef={dialog}
 				/>

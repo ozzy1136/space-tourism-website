@@ -52,19 +52,16 @@
 }
 
 .navListItem {
-	@media (--viewport-tablet) {
-		position: relative;
-	}
-
 	@media (--viewport-desktop) {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
 		counter-increment: list-item;
 	}
 }
 
-.navListItem::before {
+.navLink {
+	position: relative;
+}
+
+.navLink::before {
 	@media (--viewport-desktop) {
 		font-weight: bold;
 		padding-inline-end: 0.6em;
@@ -72,18 +69,18 @@
 	}
 }
 
-@media (any-pointer: fine) {
-	.navLink[aria-current="page"]::after {
-		content: "";
-		display: block;
-		width: 100%;
-		height: 3px;
-		position: absolute;
-		left: 0px;
-		bottom: calc(var(--nav-padding-block) * -1);
-		background-color: rgb(var(--c-white));
-	}
+.navLink[aria-current="page"]::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 3px;
+	position: absolute;
+	left: 0px;
+	bottom: calc(var(--nav-padding-block) * -1);
+	background-color: rgb(var(--c-white));
+}
 
+@media (any-pointer: fine) {
 	.navLink[aria-current="false"]:hover::after {
 		content: "";
 		display: block;

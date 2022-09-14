@@ -32,7 +32,7 @@
 }
 
 .logoSVG {
-	height: 2em;
+	height: 2.5em;
 	aspect-ratio: 1;
 
 	@media (--viewport-tablet) {

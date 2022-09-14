@@ -1,0 +1,37 @@
+.headingWrapper {
+	grid-column: wrapper;
+	margin-block-start: 3vh;
+	margin-block-end: 3vh;
+}
+
+.descriptionWrapper {
+	grid-column: wrapper;
+}
+
+.ctaWrapper {
+	grid-column: wrapper;
+	justify-content: center;
+}
+
+.heading {
+	margin-block: unset;
+	text-align: center;
+}
+
+.description {
+	text-align: center;
+}
+
+.cta {
+	--circle-diameter: clamp(44px, 45vw, 140px);
+
+	margin-block-start: 12vh;
+	margin-block-end: 10vh;
+	line-height: var(--circle-diameter);
+	width: var(--circle-diameter);
+	background-color: rgb(var(--c-white));
+	color: rgb(var(--c-black));
+	text-align: center;
+	letter-spacing: 0.062em;
+	border-radius: 50%;
+}

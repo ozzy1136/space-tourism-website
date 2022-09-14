@@ -30,7 +30,7 @@
 	--fz-xxl: 32px;
 	--fz-xxxl: 36px;
 
-	@media screen and (min-width: 700px) {
+	@media (--viewport-tablet) {
 		--fz-md: 28px;
 		--fz-lg: 32px;
 		--fz-xl: 56px;
@@ -52,11 +52,24 @@ html {
 body {
 	padding: unset;
 	margin: unset;
+	min-height: 100vh;
+	position: relative;
+	background-color: rgb(var(--c-black));
+	color: rgb(var(--c-white));
 	font-family: var(--ff-body);
 	font-size: var(--fz-base);
 	line-height: 1.5;
-	background-color: rgb(var(--c-black));
-	color: rgb(var(--c-white));
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.text-subheading1,
+.text-subheading2,
+.text-nav {
+	text-transform: uppercase;
 }
 
 h1,
@@ -100,6 +113,7 @@ h5 {
 }
 
 .text-nav {
+	text-decoration: none;
 	font-family: var(--ff-heading-secondary);
 	font-size: var(--fz-sm);
 	letter-spacing: 0.27em;
@@ -131,4 +145,13 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+.l-pagebg {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }

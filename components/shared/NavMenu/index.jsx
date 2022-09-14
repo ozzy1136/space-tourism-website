@@ -9,10 +9,10 @@ export default function NavMenu({ classNames, dialogRef }) {
 	return (
 		<nav className={classNames.navWrapper}>
 			<ol className={classNames.navList}>
-				<li className={`text-nav ${classNames.navListItem}`}>
+				<li className={`${classNames.navListItem}`}>
 					<Link href="/">
 						<a
-							className={`${styles.navLink} ${
+							className={`text-nav ${styles.navLink} ${
 								classNames.navLink ? classNames.navLink : ""
 							}`}
 							onClick={() =>
@@ -26,10 +26,10 @@ export default function NavMenu({ classNames, dialogRef }) {
 						</a>
 					</Link>
 				</li>
-				<li className={`text-nav ${classNames.navListItem}`}>
+				<li className={`${classNames.navListItem}`}>
 					<Link href="/destination">
 						<a
-							className={`${styles.navLink} ${
+							className={`text-nav ${styles.navLink} ${
 								classNames.navLink ? classNames.navLink : ""
 							}`}
 							onClick={() =>
@@ -45,10 +45,10 @@ export default function NavMenu({ classNames, dialogRef }) {
 						</a>
 					</Link>
 				</li>
-				<li className={`text-nav ${classNames.navListItem}`}>
+				<li className={`${classNames.navListItem}`}>
 					<Link href="/crew">
 						<a
-							className={`${styles.navLink} ${
+							className={`text-nav ${styles.navLink} ${
 								classNames.navLink ? classNames.navLink : ""
 							}`}
 							onClick={() =>
@@ -64,10 +64,10 @@ export default function NavMenu({ classNames, dialogRef }) {
 						</a>
 					</Link>
 				</li>
-				<li className={`text-nav ${classNames.navListItem}`}>
+				<li className={`${classNames.navListItem}`}>
 					<Link href="/technology">
 						<a
-							className={`${styles.navLink} ${
+							className={`text-nav ${styles.navLink} ${
 								classNames.navLink ? classNames.navLink : ""
 							}`}
 							onClick={() =>

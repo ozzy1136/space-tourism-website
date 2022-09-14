@@ -8,6 +8,11 @@
 	src: url("./public/BarlowCondensed-Regular.ttf") format("truetype");
 }
 
+@font-face {
+	font-family: "Barlow Regular";
+	src: url("./public/Barlow-Regular.ttf") format("truetype");
+}
+
 @custom-media --viewport-mobile (width < 699px);
 @custom-media --viewport-tablet (width >= 700px);
 @custom-media --viewport-desktop (width >= 1000px);
@@ -17,7 +22,7 @@
 	--c-blue: 208, 214, 249;
 	--c-white: 255, 255, 255;
 
-	--ff-body: sans-serif;
+	--ff-body: "Barlow Regular", sans-serif;
 	--ff-heading-primary: "Bellefair Regular", serif;
 	--ff-heading-secondary: "Barlow Condensed Regular", sans-serif;
 
@@ -25,10 +30,10 @@
 	--fz-sm: 16px;
 	--fz-base: 1rem;
 	--fz-md: 20px;
-	--fz-lg: 24px;
-	--fz-xl: 28px;
-	--fz-xxl: 32px;
-	--fz-xxxl: 36px;
+	--fz-lg: 32px;
+	--fz-xl: 44px;
+	--fz-xxl: 56px;
+	--fz-xxxl: 68px;
 
 	@media (--viewport-tablet) {
 		--fz-md: 28px;
@@ -55,68 +60,76 @@ body {
 	min-height: 100vh;
 	position: relative;
 	background-color: rgb(var(--c-black));
-	color: rgb(var(--c-white));
+	color: rgb(var(--c-blue));
 	font-family: var(--ff-body);
 	font-size: var(--fz-base);
-	line-height: 1.5;
+	line-height: 2;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
+.text-xxxxl,
+.text-xxxl,
+.text-xxl,
+.text-xl,
+.text-lg,
 .text-subheading1,
 .text-subheading2,
 .text-nav {
 	text-transform: uppercase;
+	font-weight: normal;
 }
 
-h1,
-h2,
-h3,
-h4 {
+.text-xxxxl,
+.text-xxxl,
+.text-xxl,
+.text-xl {
 	font-family: var(--ff-heading-primary);
+	line-height: 1.2;
+	color: rgb(var(--c-white));
 }
 
-h1 {
+.text-xxxxl {
 	font-size: var(--fz-xxxl);
 }
 
-h2 {
+.text-xxxl {
 	font-size: var(--fz-xxl);
 }
 
-h3 {
+.text-xxl {
 	font-size: var(--fz-xl);
 }
 
-h4 {
+.text-xl {
 	font-size: var(--fz-lg);
 }
 
-h5 {
+.text-lg {
 	font-family: var(--ff-heading-secondary);
-	font-size: var(--fz-md);
-	letter-spacing: 0.475em;
+	font-size: var(--fz-base);
+	letter-spacing: 0.168em;
+	color: rgb(var(--c-blue));
+	line-height: 2;
 }
 
 .text-subheading1 {
 	font-family: var(--ff-heading-primary);
 	font-size: var(--fz-md);
+	color: rgb(var(--c-white));
 }
 
 .text-subheading2 {
 	font-family: var(--ff-heading-secondary);
 	font-size: var(--fz-xs);
-	letter-spacing: 0.235em;
+	letter-spacing: 0.168em;
+	color: rgb(var(--c-white));
 }
 
 .text-nav {
 	text-decoration: none;
 	font-family: var(--ff-heading-secondary);
 	font-size: var(--fz-sm);
-	letter-spacing: 0.27em;
+	letter-spacing: 0.168em;
+	color: rgb(var(--c-white));
 }
 
 a {

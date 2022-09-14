@@ -1,6 +1,11 @@
-let name, images, description, distance, travel;
+import fs from "fs/promises";
+import path from "path";
 
-export default function Destination() {
+/**
+ * @param {object} props
+ * @param {{name: string, images: {png: string, webp: string}, description: string, distance: string, travel: string}[]} props.destinationsData
+ */
+export default function Destination({ destinationsData }) {
 	return (
 		<div>
 			<div>
@@ -12,10 +17,24 @@ export default function Destination() {
 				<li>Europa</li>
 				<li>Titan</li>
 			</ul>
-			<p>{name}</p>
-			<p>{description}</p>
-			<p>Avg. distance {distance}</p>
-			<p>Est. travel time {travel}</p>
+			{destinationsData.map((destination, i) => (
+				<div key={i}>
+					<p>{destination.name}</p>
+					<p>{destination.description}</p>
+					<p>Avg. distance {destination.distance}</p>
+					<p>Est. travel time {destination.travel}</p>
+				</div>
+			))}
 		</div>
 	);
+}
+
+export async function getStaticProps() {
+	const dataFilePath = path.join(process.cwd(), "data.json");
+	let data = await fs.readFile(dataFilePath);
+	let content = JSON.parse(data);
+
+	return {
+		props: { destinationsData: content.destinations },
+	};
 }

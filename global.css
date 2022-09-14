@@ -1,16 +1,19 @@
 @font-face {
 	font-family: "Bellefair Regular";
 	src: url("./public/Bellefair-Regular.ttf") format("truetype");
+	font-display: swap;
 }
 
 @font-face {
 	font-family: "Barlow Condensed Regular";
 	src: url("./public/BarlowCondensed-Regular.ttf") format("truetype");
+	font-display: swap;
 }
 
 @font-face {
 	font-family: "Barlow Regular";
 	src: url("./public/Barlow-Regular.ttf") format("truetype");
+	font-display: swap;
 }
 
 @custom-media --viewport-mobile (width < 699px);

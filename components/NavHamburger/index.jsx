@@ -14,6 +14,7 @@ export default function NavBar() {
 			<button
 				className={`l-center-children ${styles.hamburgerToggle} ${styles.hamburgerToggleOpen}`}
 				type="button"
+				aria-label="Open site navigation menu"
 				onClick={() => dialog.current.show()}
 			>
 				<IconHamburger />
@@ -30,6 +31,7 @@ export default function NavBar() {
 				title="Site Navigation"
 				dialogRef={(instance) => (dialog.current = instance)}
 				closeButtonContent={<IconClose />}
+				closeButtonLabel="Close site navigation menu"
 			>
 				<NavMenu
 					classNames={{

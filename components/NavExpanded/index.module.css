@@ -82,7 +82,7 @@
 	background-color: rgb(var(--c-white));
 }
 
-@media (any-pointer: fine) {
+@media (hover: hover) {
 	.navLink[aria-current="false"]:hover::after {
 		content: "";
 		display: block;

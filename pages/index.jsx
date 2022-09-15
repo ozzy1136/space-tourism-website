@@ -52,6 +52,7 @@ export default function Home() {
 					className={`l-pagebg`}
 					src="/assets/home/background-home-mobile.jpg"
 					alt=""
+					role="presentation"
 				/>
 			</picture>
 		</>

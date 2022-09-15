@@ -2,7 +2,7 @@
 	display: none;
 
 	@media (--viewport-tablet) {
-		--nav-padding-block: 4vh;
+		--nav-padding-block: 5vw;
 
 		display: flex;
 		align-items: center;
@@ -17,6 +17,8 @@
 	}
 
 	@media (--viewport-desktop) {
+		--nav-padding-block: 2vw;
+
 		grid-column-start: span 3;
 		padding-inline: 8vw;
 	}

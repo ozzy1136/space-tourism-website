@@ -29,7 +29,17 @@ export default function NavBar() {
 				}}
 				id="site-navigation"
 				title="Site Navigation"
-				dialogRef={(instance) => (dialog.current = instance)}
+				dialogRef={(instance) => {
+					dialog.current = instance;
+					if (dialog.current) {
+						dialog.current.on("show", () =>
+							document.body.classList.toggle("no-scroll", true)
+						);
+						dialog.current.on("hide", () =>
+							document.body.classList.toggle("no-scroll", false)
+						);
+					}
+				}}
 				closeButtonContent={<IconClose />}
 				closeButtonLabel="Close site navigation menu"
 			>

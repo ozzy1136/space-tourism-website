@@ -29,20 +29,20 @@
 	--ff-heading-primary: "Bellefair Regular", serif;
 	--ff-heading-secondary: "Barlow Condensed Regular", sans-serif;
 
-	--fz-sm: 0.9rem;
-	--fz-base: 1rem;
-	--fz-lg: 1rem;
-	--fz-xl: 1.75rem;
-	--fz-xxl: 2.5rem;
-	--fz-xxxl: 3.25rem;
-	--fz-xxxxl: 4rem;
+	--fz-50: 0.9rem;
+	--fz-100: 1rem;
+	--fz-200: 1rem;
+	--fz-300: 1.75rem;
+	--fz-400: 2.5rem;
+	--fz-500: 3.25rem;
+	--fz-600: 4rem;
 
 	@media (--viewport-tablet) {
-		--fz-lg: 2rem;
-		--fz-xl: 4rem;
-		--fz-xxl: 6rem;
-		--fz-xxxl: 8rem;
-		--fz-xxxxl: 10rem;
+		--fz-200: 2rem;
+		--fz-300: 4rem;
+		--fz-400: 6rem;
+		--fz-500: 8rem;
+		--fz-600: 10rem;
 	}
 }
 
@@ -63,7 +63,7 @@ body {
 	position: relative;
 	color: rgb(var(--c-blue));
 	font-family: var(--ff-body);
-	font-size: var(--fz-base);
+	font-size: var(--fz-100);
 	line-height: 1.7;
 }
 
@@ -108,37 +108,37 @@ a {
 }
 
 .text-xxxxl {
-	font-size: var(--fz-xxxxl);
+	font-size: var(--fz-600);
 }
 
 .text-xxxl {
-	font-size: var(--fz-xxxl);
+	font-size: var(--fz-500);
 }
 
 .text-xxl {
-	font-size: var(--fz-xxl);
+	font-size: var(--fz-400);
 }
 
 .text-xl {
-	font-size: var(--fz-xl);
+	font-size: var(--fz-300);
 }
 
 .text-lg {
 	font-family: var(--ff-heading-secondary);
-	font-size: var(--fz-lg);
+	font-size: var(--fz-200);
 	letter-spacing: 0.168em;
 	color: rgb(var(--c-blue));
 	line-height: 1.7;
 }
 
 .text-subheading1 {
-	font-size: var(--fz-lg);
+	font-size: var(--fz-200);
 }
 
 .text-subheading2,
 .text-nav {
 	font-family: var(--ff-heading-secondary);
-	font-size: var(--fz-sm);
+	font-size: var(--fz-50);
 	color: rgb(var(--c-white));
 }
 

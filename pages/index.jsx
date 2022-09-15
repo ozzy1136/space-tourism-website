@@ -18,7 +18,9 @@ export default function Home() {
 						Space
 					</h1>
 				</div>
-				<div className={`${styles.descriptionWrapper}`}>
+				<div
+					className={`l-center-children ${styles.descriptionWrapper}`}
+				>
 					<p className={`${styles.description}`}>
 						Let&#8217;s face it; if you want to go to space, you
 						might as well genuinely go to outer space and not hover

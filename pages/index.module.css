@@ -1,32 +1,75 @@
+.wrapper {
+	@media (--viewport-desktop) {
+		--content-columns: auto auto;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		padding-block-end: 10vh;
+	}
+}
+
 .headingWrapper {
 	grid-column: wrapper;
 	margin-block-start: 3vh;
 	margin-block-end: 3vh;
+
+	@media (--viewport-tablet) {
+		margin-block-start: unset;
+	}
+
+	@media (--viewport-desktop) {
+		grid-column: wrapper-start / span 1;
+		align-self: flex-end;
+		margin-block-end: unset;
+	}
 }
 
 .descriptionWrapper {
 	grid-column: wrapper;
+
+	@media (--viewport-desktop) {
+		grid-column: wrapper-start / span 1;
+		align-self: flex-start;
+		justify-content: flex-start;
+	}
 }
 
 .ctaWrapper {
 	grid-column: wrapper;
 	justify-content: center;
+	margin-block-start: 12vh;
+	margin-block-end: 10vh;
+
+	@media (--viewport-tablet) {
+		margin-block-start: 20vw;
+		margin-block-end: 12vw;
+	}
+
+	@media (--viewport-desktop) {
+		margin-block-end: unset;
+		grid-column: span 1 / wrapper-end;
+		grid-row: 1 / span 2;
+		align-self: flex-end;
+		justify-content: flex-end;
+	}
+}
+
+.heading,
+.description {
+	text-align: center;
+	@media (--viewport-desktop) {
+		text-align: left;
+	}
 }
 
 .heading {
 	margin-block: unset;
-	text-align: center;
-}
-
-.description {
-	text-align: center;
 }
 
 .cta {
-	--circle-diameter: clamp(44px, 45vw, 140px);
+	--circle-diameter: min(45vw, 150px);
 
-	margin-block-start: 12vh;
-	margin-block-end: 10vh;
 	line-height: var(--circle-diameter);
 	width: var(--circle-diameter);
 	background-color: rgb(var(--c-white));
@@ -34,4 +77,12 @@
 	text-align: center;
 	letter-spacing: 0.062em;
 	border-radius: 50%;
+
+	@media (--viewport-tablet) {
+		--circle-diameter: min(30vw, 225px);
+	}
+
+	@media (--viewport-desktop) {
+		--circle-diameter: min(20vw, 225px);
+	}
 }

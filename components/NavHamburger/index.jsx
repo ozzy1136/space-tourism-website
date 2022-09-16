@@ -12,7 +12,7 @@ export default function NavBar() {
 	return (
 		<div className={`${styles.wrapper}`}>
 			<button
-				className={`l-center-children ${styles.hamburgerToggle} ${styles.hamburgerToggleOpen}`}
+				className={`center-children ${styles.hamburgerToggle} ${styles.hamburgerToggleOpen}`}
 				type="button"
 				aria-label="Open site navigation menu"
 				onClick={() => dialog.current.show()}
@@ -24,8 +24,8 @@ export default function NavBar() {
 					container: styles.hamburgerWrapper,
 					overlay: styles.hamburgerOverlay,
 					dialog: styles.hamburgerDialog,
-					title: styles.hamburgerTitle,
-					closeButton: `l-center-children ${styles.hamburgerToggle} ${styles.hamburgerToggleClose}`,
+					title: "sr-only",
+					closeButton: `center-children ${styles.hamburgerToggle} ${styles.hamburgerToggleClose}`,
 				}}
 				id="site-navigation"
 				title="Site Navigation"

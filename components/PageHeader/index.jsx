@@ -6,7 +6,7 @@ import NavExpanded from "../NavExpanded";
 
 export default function PageHeader() {
 	return (
-		<header className={`l-section-wrapper ${styles.wrapper}`}>
+		<header className={`page-section-container ${styles.wrapper}`}>
 			<div className={`${styles.logoWrapper}`}>
 				<Logo className={`${styles.logoSVG}`} />
 			</div>

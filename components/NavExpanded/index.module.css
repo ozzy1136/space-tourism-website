@@ -40,12 +40,9 @@
 }
 
 .navList {
-	margin: unset;
-	padding: unset;
 	display: flex;
 	flex-direction: row;
 	column-gap: 1.5em;
-	list-style-type: none;
 	counter-reset: list-item -1;
 
 	@media (--viewport-desktop) {

@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Home() {
 	return (
 		<>
-			<main className={`l-section-wrapper ${styles.wrapper}`}>
+			<main className={`page-section-container ${styles.wrapper}`}>
 				<div className={`${styles.headingWrapper}`}>
 					<h1 className={`text-xxxxl ${styles.heading}`}>
 						<span
@@ -18,9 +18,7 @@ export default function Home() {
 						Space
 					</h1>
 				</div>
-				<div
-					className={`l-center-children ${styles.descriptionWrapper}`}
-				>
+				<div className={`center-children ${styles.descriptionWrapper}`}>
 					<p className={`${styles.description}`}>
 						Let&#8217;s face it; if you want to go to space, you
 						might as well genuinely go to outer space and not hover
@@ -29,7 +27,7 @@ export default function Home() {
 						experience!
 					</p>
 				</div>
-				<div className={`l-center-children ${styles.ctaWrapper}`}>
+				<div className={`center-children ${styles.ctaWrapper}`}>
 					<Link href="/destination">
 						<a className={`text-subheading1 ${styles.cta}`}>
 							Explore
@@ -41,15 +39,15 @@ export default function Home() {
 				<source
 					srcSet="/assets/home/background-home-desktop.jpg"
 					type="image/jpeg"
-					media="(min-width: 1000px)"
+					media="(min-width: 1024px)"
 				/>
 				<source
 					srcSet="/assets/home/background-home-tablet.jpg"
 					type="image/jpeg"
-					media="(min-width: 650px)"
+					media="(min-width: 768px)"
 				/>
 				<img
-					className={`l-pagebg`}
+					className={`page-bg`}
 					src="/assets/home/background-home-mobile.jpg"
 					alt=""
 					role="presentation"

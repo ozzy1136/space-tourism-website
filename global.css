@@ -2,25 +2,25 @@
 
 @font-face {
 	font-family: "Bellefair Regular";
-	src: url("./public/Bellefair-Regular.ttf") format("truetype");
+	src: url("./public/fonts/Bellefair-Regular.ttf") format("truetype");
 	font-display: swap;
 }
 
 @font-face {
 	font-family: "Barlow Condensed Regular";
-	src: url("./public/BarlowCondensed-Regular.ttf") format("truetype");
+	src: url("./public/fonts/BarlowCondensed-Regular.ttf") format("truetype");
 	font-display: swap;
 }
 
 @font-face {
 	font-family: "Barlow Regular";
-	src: url("./public/Barlow-Regular.ttf") format("truetype");
+	src: url("./public/fonts/Barlow-Regular.ttf") format("truetype");
 	font-display: swap;
 }
 
 @custom-media --viewport-mobile (width < 699px);
-@custom-media --viewport-tablet (width >= 700px);
-@custom-media --viewport-desktop (width >= 1025px);
+@custom-media --viewport-tablet (width >= 768px);
+@custom-media --viewport-desktop (width >= 1024px);
 
 :root {
 	--c-black: 11, 13, 23;
@@ -84,7 +84,7 @@ body.no-scroll {
 .text-xxxl,
 .text-xxl,
 .text-xl {
-	line-height: 1;
+	line-height: 1.1;
 }
 
 .text-xxxxl {
@@ -131,31 +131,19 @@ body.no-scroll {
 	letter-spacing: 0.168em;
 }
 
-.l-section-container {
-	--content-columns: 1fr;
+.page-section-container {
 	--page-gap-size: 10vw;
-
-	display: grid;
-	grid-template-columns:
-		[full-start] var(--page-gap-size) [wrapper-start] var(--content-columns)
-		[wrapper-end] var(--page-gap-size) [full-end];
 
 	@media (--viewport-tablet) {
 		--page-gap-size: 10vw;
 	}
 
-	@media (--viewport-desktop) {
+	@media (width > 1025px) {
 		--page-gap-size: 14vw;
 	}
 }
 
-.l-center-children {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.l-pagebg {
+.page-bg {
 	position: absolute;
 	z-index: -1;
 	top: 0;

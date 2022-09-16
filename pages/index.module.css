@@ -58,13 +58,14 @@
 .heading,
 .description {
 	text-align: center;
+
 	@media (--viewport-desktop) {
 		text-align: left;
 	}
 }
 
 .heading {
-	margin-block: unset;
+	margin-block-end: 3vh;
 }
 
 .cta {

@@ -7,7 +7,6 @@
 
 	@media (--viewport-tablet) {
 		--content-columns: 1fr 4fr;
-
 		--header-padding-block: 0px;
 	}
 

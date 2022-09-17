@@ -235,11 +235,11 @@ body {
 
 :where([aria-hidden="false" i][hidden]) {
 	display: initial;
+	position: absolute;
 }
 
 :where([aria-hidden="false" i][hidden]:not(:focus)) {
 	clip: rect(0, 0, 0, 0);
-	position: absolute;
 }
 
 /*
@@ -249,14 +249,12 @@ body {
 */
 
 .sr-only {
+	display: initial;
 	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
+}
+
+.sr-only:not(:focus) {
 	clip: rect(0, 0, 0, 0);
-	overflow: hidden;
-	white-space: nowrap;
-	border: 0;
 }
 
 .center-children {

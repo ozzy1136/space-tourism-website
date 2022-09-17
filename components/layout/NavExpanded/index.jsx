@@ -1,6 +1,6 @@
 import styles from "./index.module.css";
 
-import NavMenu from "../shared/NavMenu";
+import NavMenu from "../../shared/NavMenu";
 
 export default function NavExpanded() {
 	return (

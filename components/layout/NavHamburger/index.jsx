@@ -2,7 +2,7 @@ import styles from "./index.module.css";
 
 import { useRef } from "react";
 import { A11yDialog } from "react-a11y-dialog";
-import NavMenu from "../shared/NavMenu";
+import NavMenu from "../../shared/NavMenu";
 import IconHamburger from "./icon-hamburger.svg";
 import IconClose from "./icon-close.svg";
 

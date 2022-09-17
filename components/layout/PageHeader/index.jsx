@@ -1,6 +1,6 @@
 import styles from "./index.module.css";
 
-import Logo from "../shared/logo.svg";
+import Logo from "../../shared/logo.svg";
 import NavHamburger from "../NavHamburger";
 import NavExpanded from "../NavExpanded";
 

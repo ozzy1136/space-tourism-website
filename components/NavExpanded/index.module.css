@@ -58,6 +58,7 @@
 
 .navLink {
 	position: relative;
+	justify-content: center;
 }
 
 .navLink::before {

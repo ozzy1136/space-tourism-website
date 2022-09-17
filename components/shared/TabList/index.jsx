@@ -109,7 +109,7 @@ export default function TabList({
 						aria-selected={
 							selectedTabId === `tab-${i + 1}` ? true : false
 						}
-						tabIndex={selectedTabId === `tab-${i + 1}` ? 0 : -1}
+						tabIndex={selectedTabId !== `tab-${i + 1}` && -1}
 						onKeyDown={onKeydown}
 						onClick={onClick}
 						ref={
@@ -120,9 +120,7 @@ export default function TabList({
 								: null
 						}
 					>
-						<span bruh={"bruhhhhhhh"} className="focus">
-							{tabName}
-						</span>
+						<span className="focus">{tabName}</span>
 					</button>
 				))}
 			</div>
@@ -132,7 +130,7 @@ export default function TabList({
 					id={`tabpanel-${i + 1}`}
 					role="tabpanel"
 					aria-labelledby={`tab-${i + 1}`}
-					hidden={selectedTabId === `tab-${i + 1}` ? false : true}
+					hidden={selectedTabId !== `tab-${i + 1}` && true}
 				>
 					{tabContent}
 				</div>

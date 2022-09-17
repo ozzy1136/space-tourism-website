@@ -15,8 +15,8 @@ export default [
 					female composer in Denmark. Maria Theresia composed music
 					for several ballets, operas, and plays of the royal theatre.
 					She was given good critic as a composer and described as a “
-					<span lang="da">virkelig Tonekunstnerinde</span>” ('a True
-					Artist of Music').
+					<span lang="da">virkelig Tonekunstnerinde</span>” (&apos;a
+					True Artist of Music&apos;).
 				</p>
 			</React.Fragment>
 		),

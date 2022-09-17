@@ -1,0 +1,17 @@
+.headingWrapper {
+	grid-column: wrapper;
+	text-align: center;
+}
+
+.destinationSelectorWrapper {
+	grid-column: wrapper;
+}
+
+.contentWrapper {
+	grid-column: wrapper;
+}
+
+.headingCounter {
+	font-weight: bold;
+	color: rgba(var(--c-white), 0.25);
+}

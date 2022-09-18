@@ -27,7 +27,11 @@ export default function NavMenu({ classNames, dialogRef }) {
 									styles.navLink,
 									classNames.navLink,
 								])}
-								onClick={() => dialogRef.current.hide()}
+								onClick={
+									dialogRef
+										? () => dialogRef.current.hide()
+										: undefined
+								}
 								aria-current={
 									router.pathname === targetHref
 										? "page"

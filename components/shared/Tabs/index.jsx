@@ -1,18 +1,13 @@
 import { ReactElement, useState, useRef, useEffect } from "react";
-import filterClassNames from "utils/filterClassNames";
 
 /**
  * @param {object} props
- * @param {{wrapper: string, heading: string, tabList: string, tab: string, tabName: string, tabContentWrapper: string}} props.classNames
+ * @param {string} props.tabsHeadingId
  * @param {{tabName: string, tabContent: ReactElement}[]} props.tabListData
+ * @param {{wrapper: string, tabList: string, tab: string, tabName: string, tabContentWrapper: string}} props.classNames
  *
  */
-export default function TabList({
-	classNames,
-	tabListTitle,
-	tabListHeadingId,
-	tabListData,
-}) {
+export default function TabList({ tabsHeadingId, tabListData, classNames }) {
 	/*
 	 * 	This content is licensed according to the W3C Software License at
 	 * 	https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
@@ -105,13 +100,10 @@ export default function TabList({
 
 	return (
 		<div className={classNames.wrapper}>
-			<h2 className={classNames.heading} id={tabListHeadingId}>
-				{tabListTitle}
-			</h2>
 			<div
 				className={classNames.tabList}
 				role="tablist"
-				aria-labelledby={tabListHeadingId}
+				aria-labelledby={tabsHeadingId}
 			>
 				{tabNames.map((tabName, i) => (
 					<button
@@ -132,7 +124,7 @@ export default function TabList({
 						ref={
 							i === 0
 								? firstTabRef
-								: i === tabListData.length - 1
+								: i === tabNames.length - 1
 								? lastTabRef
 								: undefined
 						}

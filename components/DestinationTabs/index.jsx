@@ -1,9 +1,9 @@
 import styles from "./index.module.css";
 
-import TabList from "components/shared/TabList";
+import Tabs from "components/shared/Tabs";
 import DestinationTab from "components/DestinationTab";
 
-export default function DestinationTabList({ data }) {
+export default function DestinationTabList({ tabsHeadingId, data }) {
 	const tabListData = data.map((curr) => {
 		return {
 			tabName: curr.name,
@@ -12,18 +12,16 @@ export default function DestinationTabList({ data }) {
 	});
 
 	return (
-		<TabList
+		<Tabs
+			tabsHeadingId={tabsHeadingId}
+			tabListData={tabListData}
 			classNames={{
 				wrapper: styles.tabs,
-				heading: styles.tabsHeading,
 				tabList: styles.tabList,
 				tab: styles.tab,
 				tabName: styles.tabName,
 				tabContentWrapper: styles.tabContentWrapper,
 			}}
-			tabListTitle="Danish Composers"
-			tabListHeadingId="tablist-1"
-			tabListData={tabListData}
 		/>
 	);
 }

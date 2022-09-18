@@ -2,13 +2,15 @@ import styles from "./index.module.css";
 
 import fs from "fs/promises";
 import path from "path";
-import DestinationsTabList from "components/DestinationsTabList";
+import DestinationTabs from "components/DestinationTabs";
 
 /**
  * @param {object} props
  * @param {{name: string, images: {png: string, webp: string}, description: string, distance: string, travel: string}[]} props.destinationsData
  */
 export default function Destination({ destinationsData }) {
+	const tabsHeadingId = "destination-tabs";
+
 	return (
 		<>
 			<main className={`page-section-container ${styles.wrapper}`}>
@@ -18,11 +20,17 @@ export default function Destination({ destinationsData }) {
 					>
 						01
 					</span>
-					<h1 className={`text-subheading2 ${styles.heading}`}>
+					<h1
+						className={`text-subheading2 ${styles.heading}`}
+						id={tabsHeadingId}
+					>
 						Pick your destination
 					</h1>
 				</div>
-				<DestinationsTabList data={destinationsData} />
+				<DestinationTabs
+					tabsHeadingId={tabsHeadingId}
+					data={destinationsData}
+				/>
 			</main>
 			<picture>
 				<source

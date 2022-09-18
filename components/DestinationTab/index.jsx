@@ -16,9 +16,9 @@ export default function DestinationTab({ data }) {
 				</picture>
 			</div>
 			<div className={styles.headingWrapper}>
-				<h3 className="text-xxxl" style={{ textAlign: "center" }}>
+				<h2 className="text-xxxl" style={{ textAlign: "center" }}>
 					{data.name}
-				</h3>
+				</h2>
 			</div>
 			<div className={styles.descriptionWrapper}>
 				<p style={{ textAlign: "center" }}>{data.description}</p>

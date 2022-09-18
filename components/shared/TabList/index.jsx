@@ -110,7 +110,7 @@ export default function TabList({
 	}
 
 	return (
-		<div className={filterClassNames(["tabs", classNames.wrapper])}>
+		<div className={classNames.wrapper}>
 			<h3 className={classNames.heading} id={tabListHeadingId}>
 				{tabListTitle}
 			</h3>
@@ -143,14 +143,7 @@ export default function TabList({
 								: undefined
 						}
 					>
-						<span
-							className={filterClassNames([
-								"focus",
-								classNames.tabName,
-							])}
-						>
-							{tabName}
-						</span>
+						<span className={classNames.tabName}>{tabName}</span>
 					</button>
 				))}
 			</div>

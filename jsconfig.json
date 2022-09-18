@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"target": "ES2015",
+		"module": "ES2015",
+		"moduleResolution": "Node16",
+		"baseUrl": ".",
+		"paths": {
+			"utils/*": ["./utils/*"],
+			"components/*": ["./components/*"]
+		}
+	},
+	"exclude": ["node_modules", "**/node_modules/*"]
+}

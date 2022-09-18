@@ -1,7 +1,7 @@
 import React from "react";
 
 // TODO replace with true data
-export default [
+const destinationsData = [
 	{
 		tabName: "Maria Ahlefeldt",
 		tabContent: (
@@ -77,3 +77,5 @@ export default [
 		),
 	},
 ];
+
+export default destinationsData;

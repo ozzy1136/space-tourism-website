@@ -2,7 +2,7 @@ import styles from "./index.module.css";
 
 import fs from "fs/promises";
 import path from "path";
-import DestinationTabList from "../../components/DestinationTabList";
+import DestinationsTabList from "components/DestinationsTabList";
 
 /**
  * @param {object} props
@@ -11,28 +11,27 @@ import DestinationTabList from "../../components/DestinationTabList";
 export default function Destination({ destinationsData }) {
 	return (
 		<>
-			<main className={`page-section-container`}>
-				<div className={`${styles.headingWrapper}`}>
-					<span className={`${styles.headingCounter}`}>01</span>{" "}
-					<h1
-						className="text-subheading2"
-						style={{
-							display: "inline-block",
-							marginInlineStart: 0.5 + "em",
-						}}
+			<main className={`page-section-container ${styles.wrapper}`}>
+				<div className={styles.headingWrapper}>
+					<span
+						className={`text-subheading2 ${styles.headingNumber}`}
 					>
+						01
+					</span>
+					<h1 className={`text-subheading2 ${styles.heading}`}>
 						Pick your destination
 					</h1>
 				</div>
-				<div className={`${styles.destinationSelectorWrapper}`}>
+				{/* <div className={styles.destinationSelectorWrapper}>
 					<li>Moon</li>
 					<li>Mars</li>
 					<li>Europa</li>
 					<li>Titan</li>
-				</div>
-				<DestinationTabList />
+				</div> */}
+				<DestinationsTabList />
+				{/* TODO move data to a JavaScript file to be used in <DestinationTabList/> */}
 				{/* {destinationsData.map((destination, i) => (
-					<article className={`${styles.contentWrapper}`} key={i}>
+					<article className={styles.contentWrapper} key={i}>
 						<picture>
 							<source
 								srcSet={destination.images.webp}
@@ -45,7 +44,7 @@ export default function Destination({ destinationsData }) {
 							/>
 						</picture>
 						<h2
-							className={`text-xxxl`}
+							className="text-xxxl"
 							style={{ textAlign: "center" }}
 						>
 							{destination.name}
@@ -76,7 +75,7 @@ export default function Destination({ destinationsData }) {
 					media="(min-width: 768px)"
 				/>
 				<img
-					className={`page-bg`}
+					className="page-bg"
 					src="/assets/destination/background-destination-mobile.jpg"
 					alt=""
 					role="presentation"

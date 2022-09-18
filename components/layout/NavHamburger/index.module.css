@@ -1,18 +1,19 @@
-.wrapper {
-	grid-column-end: wrapper-end;
-	display: flex;
-	justify-content: flex-end;
-
-	@media (--viewport-tablet) {
-		display: none;
-	}
-}
-
 .hamburgerToggle {
 	background: unset;
 	border: unset;
 	min-width: 44px;
 	min-height: 44px;
+}
+
+.hamburgerToggleOpen {
+	grid-column-end: wrapper-end;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+
+	@media (--viewport-tablet) {
+		display: none;
+	}
 }
 
 .hamburgerToggleClose {

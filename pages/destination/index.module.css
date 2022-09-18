@@ -1,3 +1,7 @@
+.wrapper {
+	padding-block-start: 4vh;
+}
+
 .headingWrapper {
 	grid-column: wrapper;
 	text-align: center;
@@ -11,7 +15,12 @@
 	grid-column: wrapper;
 }
 
-.headingCounter {
+.heading {
+	display: inline;
+}
+
+.headingNumber {
+	padding-inline-end: 0.5em;
 	font-weight: bold;
 	color: rgba(var(--c-white), 0.25);
 }

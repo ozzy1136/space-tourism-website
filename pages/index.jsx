@@ -6,12 +6,9 @@ export default function Home() {
 	return (
 		<>
 			<main className={`page-section-container ${styles.wrapper}`}>
-				<div className={`${styles.headingWrapper}`}>
+				<div className={styles.headingWrapper}>
 					<h1 className={`text-xxxxl ${styles.heading}`}>
-						<span
-							className={`text-lg`}
-							style={{ display: "inline-block" }}
-						>
+						<span className="text-lg">
 							So, you want to travel to{" "}
 						</span>
 						<br />
@@ -19,7 +16,7 @@ export default function Home() {
 					</h1>
 				</div>
 				<div className={`center-children ${styles.descriptionWrapper}`}>
-					<p className={`${styles.description}`}>
+					<p className={styles.description}>
 						Let&#8217;s face it; if you want to go to space, you
 						might as well genuinely go to outer space and not hover
 						kind of on the edge of it. Well sit back, and relax
@@ -47,9 +44,8 @@ export default function Home() {
 					media="(min-width: 768px)"
 				/>
 				<img
-					className={`page-bg`}
+					className="page-bg"
 					src="/assets/home/background-home-mobile.jpg"
-					alt=""
 					role="presentation"
 				/>
 			</picture>

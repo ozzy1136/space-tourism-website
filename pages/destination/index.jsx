@@ -22,46 +22,7 @@ export default function Destination({ destinationsData }) {
 						Pick your destination
 					</h1>
 				</div>
-				{/* <div className={styles.destinationSelectorWrapper}>
-					<li>Moon</li>
-					<li>Mars</li>
-					<li>Europa</li>
-					<li>Titan</li>
-				</div> */}
-				<DestinationsTabList />
-				{/* TODO move data to a JavaScript file to be used in <DestinationTabList/> */}
-				{/* {destinationsData.map((destination, i) => (
-					<article className={styles.contentWrapper} key={i}>
-						<picture>
-							<source
-								srcSet={destination.images.webp}
-								type="image/webp"
-							/>
-							<img
-								src={destination.images.png}
-								type="image/png"
-								alt={`${destination.name}`}
-							/>
-						</picture>
-						<h2
-							className="text-xxxl"
-							style={{ textAlign: "center" }}
-						>
-							{destination.name}
-						</h2>
-						<p style={{ textAlign: "center" }}>
-							{destination.description}
-						</p>
-						<div style={{ textAlign: "center" }}>
-							<p>Avg. distance</p>
-							<p>{destination.distance}</p>
-						</div>
-						<div style={{ textAlign: "center" }}>
-							<p>Est. travel time</p>
-							<p>{destination.travel}</p>
-						</div>
-					</article>
-				))} */}
+				<DestinationsTabList data={destinationsData} />
 			</main>
 			<picture>
 				<source
@@ -77,7 +38,6 @@ export default function Destination({ destinationsData }) {
 				<img
 					className="page-bg"
 					src="/assets/destination/background-destination-mobile.jpg"
-					alt=""
 					role="presentation"
 				/>
 			</picture>

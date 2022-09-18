@@ -1,5 +1,10 @@
 /* TODO add nice styles */
 .tabs {
+	display: contents;
+}
+
+.tabsHeading,
+.tabList {
 	grid-column: wrapper;
 }
 
@@ -31,9 +36,9 @@
 	background: hsl(220deg 43% 99%);
 }
 
-/* .tab[aria-selected="false"] {
+.tab[aria-selected="false"] {
 	border-bottom: 1px solid hsl(219deg 1% 72%);
-} */
+}
 
 .tabName {
 	display: inline-block;
@@ -50,10 +55,7 @@
 }
 
 .tabContentWrapper {
-	padding: 5px;
-	border: 2px solid hsl(219deg 1% 72%);
-	border-radius: 0 5px 5px;
-	background: hsl(220deg 43% 99%);
-	min-height: 10em;
-	overflow: auto;
+	/* display: contents; */
+	grid-column: wrapper;
+	margin-block: 5vh;
 }

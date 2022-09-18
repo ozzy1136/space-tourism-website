@@ -25,18 +25,12 @@ export default function TabList({
 	/**
 	 * @type {string[]}
 	 */
-	const tabNames = tabListData.reduce((acc, curr, i) => {
-		acc[i] = curr.tabName;
-		return acc;
-	}, []);
+	const tabNames = tabListData.map((curr) => curr.tabName);
 
 	/**
 	 * @type {ReactElement[]}
 	 */
-	const tabContents = tabListData.reduce((acc, curr, i) => {
-		acc[i] = curr.tabContent;
-		return acc;
-	}, []);
+	const tabContents = tabListData.map((curr) => curr.tabContent);
 
 	const firstTabRef = useRef();
 	const lastTabRef = useRef();
@@ -111,9 +105,9 @@ export default function TabList({
 
 	return (
 		<div className={classNames.wrapper}>
-			<h3 className={classNames.heading} id={tabListHeadingId}>
+			<h2 className={classNames.heading} id={tabListHeadingId}>
 				{tabListTitle}
-			</h3>
+			</h2>
 			<div
 				className={classNames.tabList}
 				role="tablist"
@@ -148,7 +142,7 @@ export default function TabList({
 				))}
 			</div>
 			{tabContents.map((tabContent, i) => (
-				<div
+				<article
 					className={classNames.tabContentWrapper}
 					key={i}
 					id={`tabpanel-${i + 1}`}
@@ -157,7 +151,7 @@ export default function TabList({
 					hidden={selectedTabId !== `tab-${i + 1}`}
 				>
 					{tabContent}
-				</div>
+				</article>
 			))}
 		</div>
 	);

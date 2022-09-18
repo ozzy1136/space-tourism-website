@@ -1,0 +1,13 @@
+.photoWrapper,
+.headingWrapper,
+.descriptionWrapper,
+.distanceWrapper,
+.timeWrapper {
+	grid-column: wrapper;
+	text-align: center;
+}
+
+:where(.photoWrapper, .headingWrapper, .descriptionWrapper, .distanceWrapper, .timeWrapper)
+	> * {
+	margin-inline: auto;
+}

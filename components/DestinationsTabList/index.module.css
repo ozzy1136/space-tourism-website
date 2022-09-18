@@ -2,3 +2,58 @@
 .tabs {
 	grid-column: wrapper;
 }
+
+.tab,
+.tab:focus,
+.tab:hover {
+	position: relative;
+	z-index: 2;
+	top: 2px;
+	margin: 0;
+	margin-top: 4px;
+	padding: 3px 3px 4px;
+	border: 1px solid hsl(219deg 1% 72%);
+	border-bottom: 2px solid hsl(219deg 1% 72%);
+	border-radius: 5px 5px 0 0;
+	overflow: visible;
+	background: hsl(220deg 20% 94%);
+	outline: none;
+	font-weight: bold;
+}
+
+.tab[aria-selected="true"] {
+	padding: 2px 2px 4px;
+	margin-top: 0;
+	border-width: 2px;
+	border-top-width: 6px;
+	border-top-color: rgb(36 116 214);
+	border-bottom-color: hsl(220deg 43% 99%);
+	background: hsl(220deg 43% 99%);
+}
+
+/* .tab[aria-selected="false"] {
+	border-bottom: 1px solid hsl(219deg 1% 72%);
+} */
+
+.tabName {
+	display: inline-block;
+	margin: 2px;
+	padding: 4px 6px;
+}
+
+.tab:hover > .tabName,
+.tab:focus > .tabName,
+.tab:active > .tabName {
+	padding: 2px 4px;
+	border: 2px solid rgb(36 116 214);
+	border-radius: 3px;
+}
+
+.tabContentWrapper {
+	padding: 5px;
+	border: 2px solid hsl(219deg 1% 72%);
+	border-radius: 0 5px 5px;
+	background: hsl(220deg 43% 99%);
+	min-height: 10em;
+	overflow: auto;
+}

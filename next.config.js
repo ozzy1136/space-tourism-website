@@ -10,11 +10,11 @@ const nextConfig = {
 			issuer: /\.[jt]sx?$/,
 			use: ["@svgr/webpack"],
 		});
-		config.resolve.alias.utils = path.resolve(__dirname, "utils/");
-		config.resolve.alias.components = path.resolve(
-			__dirname,
-			"components/"
-		);
+		config.resolve.alias = {
+			...config.resolve.alias,
+			utils: path.resolve(__dirname, "utils/"),
+			components: path.resolve(__dirname, "components/"),
+		};
 
 		return config;
 	},

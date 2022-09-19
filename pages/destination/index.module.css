@@ -1,18 +1,12 @@
 .wrapper {
+	row-gap: 4vh;
 	padding-block-start: 4vh;
+	padding-block-end: 8vh;
 }
 
 .headingWrapper {
 	grid-column: wrapper;
 	text-align: center;
-}
-
-.destinationSelectorWrapper {
-	grid-column: wrapper;
-}
-
-.contentWrapper {
-	grid-column: wrapper;
 }
 
 .heading {

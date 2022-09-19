@@ -87,3 +87,9 @@
 		--circle-diameter: min(20vw, 225px);
 	}
 }
+
+@media (hover: hover) {
+	.cta:hover {
+		box-shadow: 0px 0px 0px 40px rgba(var(--c-black), 0.5);
+	}
+}

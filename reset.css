@@ -264,8 +264,8 @@ body {
 }
 
 .page-section-container {
-	--content-columns: 2fr;
-	--page-gap-size: 1fr;
+	--content-columns: 1fr;
+	--page-gap-size: 8px;
 
 	display: grid;
 	grid-template-columns:

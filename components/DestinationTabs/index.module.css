@@ -7,8 +7,10 @@
 .tabList {
 	grid-row-start: 2;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
-	column-gap: 2vw;
+	column-gap: 1em;
+	row-gap: 1.5em;
 }
 
 .tabContentWrapper:not([hidden]) {
@@ -26,6 +28,7 @@
 	font-size: var(--fz-50);
 	text-transform: uppercase;
 	letter-spacing: 0.168em;
+	cursor: pointer;
 }
 
 .tab[aria-selected="true"]::after {

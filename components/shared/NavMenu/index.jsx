@@ -2,7 +2,6 @@ import styles from "./index.module.css";
 
 import { useRouter } from "next/router";
 import Link from "next/link";
-// TODO fix file location alias
 import filterClassNames from "utils/filterClassNames";
 
 const navLinksData = [

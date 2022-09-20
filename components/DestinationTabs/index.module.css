@@ -6,11 +6,11 @@
 
 .tabList {
 	grid-row-start: 2;
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(44px, auto));
 	justify-content: center;
-	column-gap: 1em;
-	row-gap: 1.5em;
+	column-gap: 1.5em;
+	row-gap: 1em;
 }
 
 .tabContentWrapper:not([hidden]) {
@@ -38,7 +38,7 @@
 	height: 3px;
 	position: absolute;
 	left: 0px;
-	bottom: -0.5em;
+	bottom: 0px;
 	background-color: rgb(var(--c-white));
 }
 
@@ -50,7 +50,7 @@
 		height: 3px;
 		position: absolute;
 		left: 0px;
-		bottom: -0.5em;
+		bottom: 0px;
 		background-color: rgba(var(--c-white), 0.5);
 	}
 }

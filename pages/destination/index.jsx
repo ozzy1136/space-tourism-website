@@ -2,7 +2,8 @@ import styles from "./index.module.css";
 
 import fs from "fs/promises";
 import path from "path";
-import DestinationTabs from "components/DestinationTabs";
+import Tabs from "components/shared/Tabs";
+import DestinationTab from "components/DestinationTab";
 
 /**
  * @param {object} props
@@ -10,6 +11,12 @@ import DestinationTabs from "components/DestinationTabs";
  */
 export default function Destination({ destinationsData }) {
 	const tabsHeadingId = "destination-tabs";
+	const tabListData = destinationsData.map((curr) => {
+		return {
+			tabName: curr.name,
+			tabContent: <DestinationTab data={curr} />,
+		};
+	});
 
 	return (
 		<>
@@ -27,9 +34,16 @@ export default function Destination({ destinationsData }) {
 						Pick your destination
 					</h1>
 				</div>
-				<DestinationTabs
+				<Tabs
 					tabsHeadingId={tabsHeadingId}
-					data={destinationsData}
+					tabListData={tabListData}
+					classNames={{
+						wrapper: styles.tabs,
+						tabList: styles.tabList,
+						tab: styles.tab,
+						tabName: styles.tabName,
+						tabContentWrapper: styles.tabContentWrapper,
+					}}
 				/>
 			</main>
 			<picture>

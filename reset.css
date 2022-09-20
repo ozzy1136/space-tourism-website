@@ -72,7 +72,7 @@ body {
 }
 
 :where(code, kbd, samp, pre) {
-	font-size: 1em;
+	font-size: 1rem;
 	font-family: ui-monospace, /* macOS 10.10+ */ "Menlo",
 		/* Windows 6+ */ "Consolas", /* Android 4+ */ "Roboto Mono",
 		/* Ubuntu 10.10+ */ "Ubuntu Monospace", /* KDE Plasma 5+ */ "Noto Mono",

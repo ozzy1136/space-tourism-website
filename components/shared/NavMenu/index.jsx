@@ -11,7 +11,7 @@ const navLinksData = [
 	{ targetHref: "/technology", targetTitle: "Technology" },
 ];
 
-export default function NavMenu({ classNames, dialogRef }) {
+export default function NavMenu({ classNames = {}, dialogRef }) {
 	const router = useRouter();
 
 	return (

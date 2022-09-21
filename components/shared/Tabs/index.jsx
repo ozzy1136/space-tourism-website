@@ -7,7 +7,11 @@ import { ReactElement, useState, useRef, useEffect } from "react";
  * @param {{wrapper: string, tabList: string, tab: string, tabName: string, tabContentWrapper: string}} props.classNames
  *
  */
-export default function TabList({ tabsHeadingId, tabListData, classNames }) {
+export default function TabList({
+	tabsHeadingId,
+	tabListData,
+	classNames = {},
+}) {
 	/*
 	 * 	This content is licensed according to the W3C Software License at
 	 * 	https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document

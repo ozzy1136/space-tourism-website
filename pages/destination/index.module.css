@@ -7,6 +7,10 @@
 		padding-block-end: 8vh;
 		row-gap: 6vh;
 	}
+
+	@media (--viewport-desktop) {
+		padding-block-end: 14vh;
+	}
 }
 
 .headingWrapper {
@@ -37,6 +41,14 @@
 	@media (--viewport-tablet) {
 		row-gap: 4vh;
 	}
+
+	@media (--viewport-desktop) {
+		text-align: start;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: repeat(4, auto);
+		row-gap: 6vh;
+		column-gap: 8vh;
+	}
 }
 
 .tabList {
@@ -46,6 +58,12 @@
 	justify-content: center;
 	column-gap: 1.5em;
 	row-gap: 1em;
+
+	@media (--viewport-desktop) {
+		grid-column-start: 2;
+		grid-row-start: 1;
+		justify-content: flex-start;
+	}
 }
 
 .tabContentWrapper:not([hidden]) {

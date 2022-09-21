@@ -1,0 +1,66 @@
+.wrapper {
+	padding-block-start: 4vh;
+	padding-block-end: 8vh;
+	row-gap: 5vh;
+
+	@media (--viewport-tablet) {
+		padding-block-end: unset;
+	}
+}
+
+.headingWrapper {
+	grid-column: wrapper;
+	text-align: center;
+
+	@media (--viewport-tablet) {
+		text-align: start;
+	}
+}
+
+.heading {
+	display: inline;
+	color: rgb(var(--c-white));
+}
+
+.headingNumber {
+	padding-inline-end: 0.5em;
+	font-weight: bold;
+	color: rgba(var(--c-white), 0.25);
+}
+
+.tabs {
+	grid-column: wrapper;
+	display: grid;
+	row-gap: 4vh;
+}
+
+.tabList {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap: 1rem;
+}
+
+.tabContentWrapper:not([hidden]) {
+	display: contents;
+}
+
+.tab {
+	--button-size: 44px;
+
+	background-color: unset;
+	border: unset;
+	width: var(--button-size);
+	height: var(--button-size);
+	background-image: radial-gradient(
+		circle,
+		rgb(var(--c-white)) 20%,
+		transparent 20%
+	);
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.tab[aria-selected="false"] {
+	opacity: 30%;
+}

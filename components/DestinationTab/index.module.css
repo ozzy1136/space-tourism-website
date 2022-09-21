@@ -1,6 +1,11 @@
 .photoWrapper {
-	max-width: 225px;
+	width: 70%;
+	max-width: 250px;
 	justify-self: center;
+
+	@media (--viewport-tablet) {
+		max-width: 350px;
+	}
 }
 
 .bioWrapper {
@@ -8,6 +13,19 @@
 	flex-direction: column;
 	align-items: center;
 	row-gap: 0.8em;
+}
+
+.detailsWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 2em;
+
+	@media (--viewport-tablet) {
+		flex-direction: row;
+		justify-content: space-around;
+		column-gap: 3em;
+	}
 }
 
 .distanceWrapper,

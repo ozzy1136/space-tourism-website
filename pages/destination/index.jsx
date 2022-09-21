@@ -22,13 +22,11 @@ export default function Destination({ destinationsData }) {
 		<>
 			<main className={`page-section-container ${styles.wrapper}`}>
 				<div className={styles.headingWrapper}>
-					<span
-						className={`text-subheading2 ${styles.headingNumber}`}
-					>
+					<span className={`text-lg ${styles.headingNumber}`}>
 						01
 					</span>
 					<h1
-						className={`text-subheading2 ${styles.heading}`}
+						className={`text-lg ${styles.heading}`}
 						id={tabsHeadingId}
 					>
 						Pick your destination

@@ -1,12 +1,21 @@
 .wrapper {
-	row-gap: 8vh;
 	padding-block-start: 6vh;
 	padding-block-end: 12vh;
+	row-gap: 8vh;
+
+	@media (--viewport-tablet) {
+		padding-block-end: 8vh;
+		row-gap: 6vh;
+	}
 }
 
 .headingWrapper {
 	grid-column: wrapper;
 	text-align: center;
+
+	@media (--viewport-tablet) {
+		text-align: start;
+	}
 }
 
 .heading {
@@ -24,6 +33,10 @@
 	text-align: center;
 	display: grid;
 	row-gap: 8vh;
+
+	@media (--viewport-tablet) {
+		row-gap: 4vh;
+	}
 }
 
 .tabList {

@@ -31,20 +31,20 @@
 	--ff-heading-primary: "Bellefair Regular", serif;
 	--ff-heading-secondary: "Barlow Condensed Regular", sans-serif;
 
-	--fz-50: 0.9rem;
+	--fz-50: 0.85rem;
 	--fz-100: 1rem;
-	--fz-200: 1rem;
-	--fz-300: 1.75rem;
-	--fz-400: 2.5rem;
-	--fz-500: 3.25rem;
-	--fz-600: 4rem;
+	--fz-200: 1.05rem;
+	--fz-300: 1.33rem;
+	--fz-400: 1.6rem;
+	--fz-500: 3.73rem;
+	--fz-600: 4.5rem;
 
 	@media (--viewport-tablet) {
-		--fz-200: 2rem;
-		--fz-300: 4rem;
-		--fz-400: 6rem;
-		--fz-500: 8rem;
-		--fz-600: 10rem;
+		--fz-200: 1.55rem;
+		--fz-300: 1.77rem;
+		--fz-400: 3.1rem;
+		--fz-500: 5.5rem;
+		--fz-600: 8.25rem;
 	}
 }
 
@@ -68,7 +68,6 @@ body.no-scroll {
 .text-subheading2,
 .text-nav {
 	text-transform: uppercase;
-	font-weight: normal;
 }
 
 .text-xxxxl,
@@ -106,7 +105,7 @@ body.no-scroll {
 .text-lg {
 	font-family: var(--ff-heading-secondary);
 	font-size: var(--fz-200);
-	letter-spacing: 0.168em;
+	letter-spacing: 4.75px;
 	color: rgb(var(--c-blue));
 	line-height: 1.7;
 }
@@ -123,12 +122,12 @@ body.no-scroll {
 }
 
 .text-subheading2 {
-	letter-spacing: 0.168em;
+	letter-spacing: 2.35px;
 }
 
 .text-nav {
 	text-decoration: none;
-	letter-spacing: 0.168em;
+	letter-spacing: 2.7px;
 }
 
 .page-section-container {

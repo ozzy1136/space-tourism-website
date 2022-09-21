@@ -20,13 +20,15 @@ export default function DestinationTab({ data }) {
 				<p>{data.description}</p>
 			</div>
 			<div className={styles.divider}></div>
-			<div className={styles.distanceWrapper}>
-				<p className="text-lg">Avg. distance</p>
-				<p className="text-xl">{data.distance}</p>
-			</div>
-			<div className={styles.timeWrapper}>
-				<p className="text-lg">Est. travel time</p>
-				<p className="text-xl">{data.travel}</p>
+			<div className={styles.detailsWrapper}>
+				<div className={styles.distanceWrapper}>
+					<p className="text-subheading2">Avg. distance</p>
+					<p className="text-subheading1">{data.distance}</p>
+				</div>
+				<div className={styles.timeWrapper}>
+					<p className="text-subheading2">Est. travel time</p>
+					<p className="text-subheading1">{data.travel}</p>
+				</div>
 			</div>
 		</React.Fragment>
 	);

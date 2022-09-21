@@ -8,7 +8,10 @@ export default function Home() {
 			<main className={`page-section-container ${styles.wrapper}`}>
 				<div className={styles.headingWrapper}>
 					<h1 className={`text-xxxxl ${styles.heading}`}>
-						<span className="text-lg">
+						<span
+							className="text-lg"
+							style={{ display: "inline-block" }}
+						>
 							So, you want to travel to{" "}
 						</span>
 						<br />
@@ -26,9 +29,7 @@ export default function Home() {
 				</div>
 				<div className={`center-children ${styles.ctaWrapper}`}>
 					<Link href="/destination">
-						<a className={`text-subheading1 ${styles.cta}`}>
-							Explore
-						</a>
+						<a className={`text-xl ${styles.cta}`}>Explore</a>
 					</Link>
 				</div>
 			</main>

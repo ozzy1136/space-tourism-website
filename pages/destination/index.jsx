@@ -29,6 +29,7 @@ export default function Destination({ destinationsData }) {
 				<Tabs
 					tabsHeadingId={tabsHeadingId}
 					tabListData={tabListData}
+					hasVisibleButtonLabel={true}
 					classNames={{
 						wrapper: styles.tabs,
 						tabList: styles.tabList,

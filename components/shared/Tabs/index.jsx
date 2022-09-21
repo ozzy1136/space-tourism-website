@@ -10,6 +10,7 @@ import { ReactElement, useState, useRef, useEffect } from "react";
 export default function TabList({
 	tabsHeadingId,
 	tabListData,
+	hasVisibleButtonLabel,
 	classNames = {},
 }) {
 	/*
@@ -116,6 +117,7 @@ export default function TabList({
 						id={`tab-${i + 1}`}
 						type="button"
 						role="tab"
+						aria-label={hasVisibleButtonLabel ? undefined : tabName}
 						aria-controls={`tabpanel-${i + 1}`}
 						aria-selected={
 							selectedTabId === `tab-${i + 1}` ? "true" : "false"
@@ -133,7 +135,7 @@ export default function TabList({
 								: undefined
 						}
 					>
-						<span className={classNames.tabName}>{tabName}</span>
+						{hasVisibleButtonLabel ? tabName : undefined}
 					</button>
 				))}
 			</div>

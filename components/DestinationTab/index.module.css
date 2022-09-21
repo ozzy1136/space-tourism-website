@@ -1,13 +1,25 @@
-.photoWrapper,
-.headingWrapper,
-.descriptionWrapper,
-.distanceWrapper,
-.timeWrapper {
-	grid-column: wrapper;
-	text-align: center;
+.photoWrapper {
+	max-width: 225px;
+	justify-self: center;
 }
 
-:where(.photoWrapper, .headingWrapper, .descriptionWrapper, .distanceWrapper, .timeWrapper)
-	> * {
-	margin-inline: auto;
+.bioWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 0.8em;
+}
+
+.distanceWrapper,
+.timeWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 0.5em;
+}
+
+.divider {
+	width: 100%;
+	height: 1px;
+	background-color: rgb(56, 59, 75);
 }

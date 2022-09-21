@@ -1,7 +1,7 @@
 .wrapper {
-	row-gap: 4vh;
-	padding-block-start: 4vh;
-	padding-block-end: 8vh;
+	row-gap: 8vh;
+	padding-block-start: 6vh;
+	padding-block-end: 12vh;
 }
 
 .headingWrapper {
@@ -21,8 +21,9 @@
 
 .tabs {
 	grid-column: wrapper;
+	text-align: center;
 	display: grid;
-	row-gap: 6vh;
+	row-gap: 8vh;
 }
 
 .tabList {
@@ -50,6 +51,10 @@
 	text-transform: uppercase;
 	letter-spacing: 0.168em;
 	cursor: pointer;
+}
+
+.tab[aria-selected="true"] {
+	color: rgb(var(--c-white));
 }
 
 .tab[aria-selected="true"]::after {

@@ -1,26 +1,61 @@
+import styles from "./index.module.css";
+
 import fs from "fs/promises";
 import path from "path";
+import Tabs from "components/shared/Tabs";
+import CrewTab from "components/CrewTab";
 
-/**
- * @param {object} props
- * @param {{name: string, images: {png: string, webp: string}, role: string, bio: string}[]} props.crewData
- */
 export default function Crew({ crewData }) {
+	const tabsHeadingId = "crew-tabs";
+	const tabListData = crewData.map((curr) => ({
+		tabName: curr.name,
+		tabContent: <CrewTab data={curr} />,
+	}));
+
 	return (
-		<div>
-			<div>
-				02 <h1>Meet your crew</h1>
-			</div>
-			{crewData.map((member, i) => {
-				return (
-					<div key={i}>
-						<p>{member.role}</p>
-						<p>{member.name}</p>
-						<p>{member.bio}</p>
-					</div>
-				);
-			})}
-		</div>
+		<>
+			<main className={`page-section-container ${styles.wrapper}`}>
+				<div className={styles.headingWrapper}>
+					<span className={`text-lg ${styles.headingNumber}`}>
+						02
+					</span>
+					<h1
+						className={`text-lg ${styles.heading}`}
+						id={tabsHeadingId}
+					>
+						Meet your crew
+					</h1>
+				</div>
+				<Tabs
+					tabsHeadingId={tabsHeadingId}
+					tabListData={tabListData}
+					classNames={{
+						wrapper: styles.tabs,
+						tabList: styles.tabList,
+						tab: styles.tab,
+						tabName: styles.tabName,
+						tabContentWrapper: styles.tabContentWrapper,
+					}}
+				/>
+			</main>
+			<picture>
+				<source
+					srcSet="/assets/crew/background-crew-desktop.jpg"
+					type="image/jpeg"
+					media="(min-width: 1024px)"
+				/>
+				<source
+					srcSet="/assets/crew/background-crew-tablet.jpg"
+					type="image/jpeg"
+					media="(min-width: 768px)"
+				/>
+				<img
+					className="page-bg"
+					src="/assets/crew/background-crew-mobile.jpg"
+					role="presentation"
+				/>
+			</picture>
+		</>
 	);
 }
 

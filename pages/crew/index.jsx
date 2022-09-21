@@ -29,6 +29,7 @@ export default function Crew({ crewData }) {
 				<Tabs
 					tabsHeadingId={tabsHeadingId}
 					tabListData={tabListData}
+					hasVisibleButtonLabel={false}
 					classNames={{
 						wrapper: styles.tabs,
 						tabList: styles.tabList,

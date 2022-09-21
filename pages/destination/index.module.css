@@ -83,7 +83,7 @@
 	font-family: var(--ff-heading-secondary);
 	font-size: var(--fz-50);
 	text-transform: uppercase;
-	letter-spacing: 0.168em;
+	letter-spacing: 2.7px;
 	cursor: pointer;
 }
 

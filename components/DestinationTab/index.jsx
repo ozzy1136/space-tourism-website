@@ -1,7 +1,5 @@
 import styles from "./index.module.css";
 
-import React from "react";
-
 /**
  * @param {object} props
  * @param {{name: string, images: {png: string, webp: string}, description: string, distance: string, travel: string}[]} props.data
@@ -9,14 +7,14 @@ import React from "react";
 
 export default function DestinationTab({ data }) {
 	return (
-		<React.Fragment>
+		<>
 			<div className={styles.photoWrapper}>
 				<picture>
 					<source srcSet={data.images.webp} type="image/webp" />
 					<img
 						src={data.images.png}
 						type="image/png"
-						alt={`${data.name}`}
+						alt={data.name}
 					/>
 				</picture>
 			</div>
@@ -35,6 +33,6 @@ export default function DestinationTab({ data }) {
 					<p className="text-subheading1">{data.travel}</p>
 				</div>
 			</div>
-		</React.Fragment>
+		</>
 	);
 }

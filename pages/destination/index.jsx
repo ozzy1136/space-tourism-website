@@ -5,18 +5,12 @@ import path from "path";
 import Tabs from "components/shared/Tabs";
 import DestinationTab from "components/DestinationTab";
 
-/**
- * @param {object} props
- * @param {{name: string, images: {png: string, webp: string}, description: string, distance: string, travel: string}[]} props.destinationsData
- */
 export default function Destination({ destinationsData }) {
 	const tabsHeadingId = "destination-tabs";
-	const tabListData = destinationsData.map((curr) => {
-		return {
-			tabName: curr.name,
-			tabContent: <DestinationTab data={curr} />,
-		};
-	});
+	const tabListData = destinationsData.map((curr) => ({
+		tabName: curr.name,
+		tabContent: <DestinationTab data={curr} />,
+	}));
 
 	return (
 		<>

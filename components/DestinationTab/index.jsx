@@ -2,6 +2,11 @@ import styles from "./index.module.css";
 
 import React from "react";
 
+/**
+ * @param {object} props
+ * @param {{name: string, images: {png: string, webp: string}, description: string, distance: string, travel: string}[]} props.data
+ */
+
 export default function DestinationTab({ data }) {
 	return (
 		<React.Fragment>

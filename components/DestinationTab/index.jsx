@@ -10,9 +10,16 @@ export default function DestinationTab({ data }) {
 		<>
 			<div className={styles.photoWrapper}>
 				<picture>
-					<source srcSet={data.images.webp} type="image/webp" />
+					<source
+						srcSet={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${
+							data.images.webp
+						}`}
+						type="image/webp"
+					/>
 					<img
-						src={data.images.png}
+						src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${
+							image.png
+						}`}
 						type="image/png"
 						alt={data.name}
 					/>

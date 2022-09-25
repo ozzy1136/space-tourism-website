@@ -17,13 +17,17 @@ export default function TechnologyTab({ data }) {
 			<div className={styles.photoWrapper}>
 				<picture>
 					<source
-						srcSet={data.images.portrait}
+						srcSet={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${
+							data.images.portrait
+						}`}
 						type="image/jpeg"
 						media="(min-width: 1025px)"
 					/>
 					<img
 						className={styles.photo}
-						src={data.images.landscape}
+						src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${
+							data.images.landscape
+						}`}
 						alt={data.name}
 					/>
 				</picture>

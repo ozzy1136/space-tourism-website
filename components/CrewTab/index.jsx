@@ -19,10 +19,17 @@ export default function CrewTab({ data }) {
 			</div>
 			<div className={`center-children ${styles.photoWrapper}`}>
 				<picture>
-					<source srcSet={data.images.webp} type="image/webp" />
+					<source
+						srcSet={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${
+							data.images.webp
+						}`}
+						type="image/webp"
+					/>
 					<img
 						className={styles.photo}
-						src={data.images.png}
+						src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${
+							data.images.png
+						}`}
 						type="image/png"
 						alt={data.name}
 					/>

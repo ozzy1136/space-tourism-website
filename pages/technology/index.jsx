@@ -1,31 +1,69 @@
+import styles from "./index.module.css";
+
 import fs from "fs/promises";
 import path from "path";
+import Tabs from "components/shared/Tabs";
+import TechnologyTab from "components/TechnologyTab";
 
-/**
- * @param {object} props
- * @param {{name: string, images: {portrait: string, landscape: string}, description: string}[]} props.technologyData
- */
 export default function Technology({ technologyData }) {
+	const tabsHeadingId = "technology-tabs";
+	const tabsData = {
+		tabNames: (() => {
+			let res = [];
+			for (let i = 1; i <= technologyData.length; i++)
+				res.push(i.toString(10));
+			return res;
+		})(),
+		tabAriaLabels: technologyData.map((curr) => curr.name),
+		tabContents: technologyData.map((curr) => (
+			<TechnologyTab data={curr} />
+		)),
+	};
+
 	return (
-		<div>
-			<div>
-				03 <h1>Space launch 101</h1>
-			</div>
-			<ol>
-				<li>1</li>
-				<li>2</li>
-				<li>3</li>
-			</ol>
-			<p>The terminology...</p>
-			{technologyData.map((technologyType, i) => {
-				return (
-					<div key={i}>
-						<p>{technologyType.name}</p>
-						<p>{technologyType.description}</p>
-					</div>
-				);
-			})}
-		</div>
+		<>
+			<main className={`page-section-container ${styles.wrapper}`}>
+				<div className={styles.headingWrapper}>
+					<span className={`text-lg ${styles.headingNumber}`}>
+						03
+					</span>{" "}
+					<h1
+						className={`text-lg ${styles.heading}`}
+						id={tabsHeadingId}
+					>
+						Space launch 101
+					</h1>
+				</div>
+				<Tabs
+					tabsHeadingId={tabsHeadingId}
+					tabsData={tabsData}
+					classNames={{
+						wrapper: styles.tabs,
+						tabList: styles.tabList,
+						tab: styles.tab,
+						tabName: styles.tabName,
+						tabContentWrapper: styles.tabContentWrapper,
+					}}
+				/>
+			</main>
+			<picture>
+				<source
+					srcSet="/assets/technology/background-technology-desktop.jpg"
+					type="image/jpeg"
+					media="(min-width: 1025px)"
+				/>
+				<source
+					srcSet="/assets/technology/background-technology-tablet.jpg"
+					type="image/jpeg"
+					media="(min-width: 768px)"
+				/>
+				<img
+					className="page-bg"
+					src="/assets/technology/background-technology-mobile.jpg"
+					role="presentation"
+				/>
+			</picture>
+		</>
 	);
 }
 

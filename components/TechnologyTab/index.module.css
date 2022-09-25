@@ -1,0 +1,19 @@
+.detailsWrapper {
+	grid-column: wrapper;
+	text-align: center;
+}
+
+.heading {
+	margin-block-start: 0.4em;
+	margin-block-end: 0.75em;
+}
+
+.subheading {
+	color: rgb(var(--c-blue));
+	margin-inline: auto;
+}
+
+.photoWrapper {
+	grid-column: full;
+	grid-row-start: 2;
+}

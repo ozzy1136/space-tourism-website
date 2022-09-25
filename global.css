@@ -131,7 +131,11 @@ body.no-scroll {
 }
 
 .page-section-container {
-	--page-gap-size: 10vw;
+	--page-gap-size: 8vw;
+
+	@media (--viewport-tablet) {
+		--page-gap-size: 10vw;
+	}
 
 	@media (--viewport-desktop) {
 		--page-gap-size: 12vw;

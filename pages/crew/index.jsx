@@ -40,18 +40,24 @@ export default function Crew({ crewData }) {
 			</main>
 			<picture>
 				<source
-					srcSet="/assets/crew/background-crew-desktop.jpg"
+					srcSet={`${
+						process.env.NEXT_PUBLIC_BASE_PATH || ""
+					}/assets/crew/background-crew-desktop.jpg`}
 					type="image/jpeg"
 					media="(min-width: 1025px)"
 				/>
 				<source
-					srcSet="/assets/crew/background-crew-tablet.jpg"
+					srcSet={`${
+						process.env.NEXT_PUBLIC_BASE_PATH || ""
+					}/assets/crew/background-crew-tablet.jpg`}
 					type="image/jpeg"
 					media="(min-width: 768px)"
 				/>
 				<img
 					className="page-bg"
-					src="/assets/crew/background-crew-mobile.jpg"
+					src={`${
+						process.env.NEXT_PUBLIC_BASE_PATH || ""
+					}/assets/crew/background-crew-mobile.jpg`}
 					alt=""
 				/>
 			</picture>

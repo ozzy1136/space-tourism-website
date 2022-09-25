@@ -35,18 +35,24 @@ export default function Home() {
 			</main>
 			<picture>
 				<source
-					srcSet="/assets/home/background-home-desktop.jpg"
+					srcSet={`${
+						process.env.NEXT_PUBLIC_BASE_PATH || ""
+					}/assets/home/background-home-desktop.jpg`}
 					type="image/jpeg"
 					media="(min-width: 1024px)"
 				/>
 				<source
-					srcSet="/assets/home/background-home-tablet.jpg"
+					srcSet={`${
+						process.env.NEXT_PUBLIC_BASE_PATH || ""
+					}/assets/home/background-home-tablet.jpg`}
 					type="image/jpeg"
 					media="(min-width: 768px)"
 				/>
 				<img
 					className="page-bg"
-					src="/assets/home/background-home-mobile.jpg"
+					src={`${
+						process.env.NEXT_PUBLIC_BASE_PATH || ""
+					}/assets/home/background-home-mobile.jpg`}
 					alt=""
 				/>
 			</picture>

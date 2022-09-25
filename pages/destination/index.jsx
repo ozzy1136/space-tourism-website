@@ -42,18 +42,24 @@ export default function Destination({ destinationsData }) {
 			</main>
 			<picture>
 				<source
-					srcSet="/assets/destination/background-destination-desktop.jpg"
+					srcSet={`${
+						process.env.NEXT_PUBLIC_BASE_PATH || ""
+					}/assets/destination/background-destination-desktop.jpg`}
 					type="image/jpeg"
 					media="(min-width: 1025px)"
 				/>
 				<source
-					srcSet="/assets/destination/background-destination-tablet.jpg"
+					srcSet={`${
+						process.env.NEXT_PUBLIC_BASE_PATH || ""
+					}/assets/destination/background-destination-tablet.jpg`}
 					type="image/jpeg"
 					media="(min-width: 768px)"
 				/>
 				<img
 					className="page-bg"
-					src="/assets/destination/background-destination-mobile.jpg"
+					src={`${
+						process.env.NEXT_PUBLIC_BASE_PATH || ""
+					}/assets/destination/background-destination-mobile.jpg`}
 					alt=""
 				/>
 			</picture>

@@ -8,7 +8,9 @@ export default function Document() {
 					rel="icon"
 					type="image/png"
 					sizes="32x32"
-					href="/favicon-32x32.png"
+					href={`${
+						process.env.NEXT_PUBLIC_BASE_PATH || ""
+					}/favicon-32x32.png`}
 				/>
 			</Head>
 			<body>

@@ -48,18 +48,24 @@ export default function Technology({ technologyData }) {
 			</main>
 			<picture>
 				<source
-					srcSet="/assets/technology/background-technology-desktop.jpg"
+					srcSet={`${
+						process.env.NEXT_PUBLIC_BASE_PATH || ""
+					}/assets/technology/background-technology-desktop.jpg`}
 					type="image/jpeg"
 					media="(min-width: 1025px)"
 				/>
 				<source
-					srcSet="/assets/technology/background-technology-tablet.jpg"
+					srcSet={`${
+						process.env.NEXT_PUBLIC_BASE_PATH || ""
+					}/assets/technology/background-technology-tablet.jpg`}
 					type="image/jpeg"
 					media="(min-width: 768px)"
 				/>
 				<img
 					className="page-bg"
-					src="/assets/technology/background-technology-mobile.jpg"
+					src={`${
+						process.env.NEXT_PUBLIC_BASE_PATH || ""
+					}/assets/technology/background-technology-mobile.jpg`}
 					alt=""
 				/>
 			</picture>

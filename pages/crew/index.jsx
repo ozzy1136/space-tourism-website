@@ -15,7 +15,7 @@ export default function Crew({ crewData }) {
 	return (
 		<>
 			<main className={`page-section-container ${styles.wrapper}`}>
-				<div className={styles.headingWrapper}>
+				<div className={`center-children ${styles.headingWrapper}`}>
 					<span className={`text-lg ${styles.headingNumber}`}>
 						02
 					</span>

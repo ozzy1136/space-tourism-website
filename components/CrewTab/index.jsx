@@ -17,7 +17,7 @@ export default function CrewTab({ data }) {
 				<h2 className={`text-xxl ${styles.name}`}>{data.name}</h2>
 				<p className={styles.bio}>{data.bio}</p>
 			</div>
-			<div className={styles.photoWrapper}>
+			<div className={`center-children ${styles.photoWrapper}`}>
 				<picture>
 					<source srcSet={data.images.webp} type="image/webp" />
 					<img

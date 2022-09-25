@@ -20,7 +20,7 @@
 
 @custom-media --viewport-mobile (width < 699px);
 @custom-media --viewport-tablet (width >= 768px);
-@custom-media --viewport-desktop (width >= 1024px);
+@custom-media --viewport-desktop (width >= 1025px);
 
 :root {
 	--c-black: 11, 13, 23;
@@ -133,7 +133,7 @@ body.no-scroll {
 .page-section-container {
 	--page-gap-size: 10vw;
 
-	@media (width > 1025px) {
+	@media (--viewport-desktop) {
 		--page-gap-size: 14vw;
 	}
 }

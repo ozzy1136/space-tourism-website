@@ -7,10 +7,10 @@ import CrewTab from "components/CrewTab";
 
 export default function Crew({ crewData }) {
 	const tabsHeadingId = "crew-tabs";
-	const tabListData = crewData.map((curr) => ({
-		tabName: curr.name,
-		tabContent: <CrewTab data={curr} />,
-	}));
+	const tabsData = {
+		tabAriaLabels: crewData.map((curr) => curr.name),
+		tabContents: crewData.map((curr) => <CrewTab data={curr} />),
+	};
 
 	return (
 		<>
@@ -28,8 +28,7 @@ export default function Crew({ crewData }) {
 				</div>
 				<Tabs
 					tabsHeadingId={tabsHeadingId}
-					tabListData={tabListData}
-					hasVisibleButtonLabel={false}
+					tabsData={tabsData}
 					classNames={{
 						wrapper: styles.tabs,
 						tabList: styles.tabList,
@@ -43,7 +42,7 @@ export default function Crew({ crewData }) {
 				<source
 					srcSet="/assets/crew/background-crew-desktop.jpg"
 					type="image/jpeg"
-					media="(min-width: 1024px)"
+					media="(min-width: 1025px)"
 				/>
 				<source
 					srcSet="/assets/crew/background-crew-tablet.jpg"

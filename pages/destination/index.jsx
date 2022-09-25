@@ -7,10 +7,12 @@ import DestinationTab from "components/DestinationTab";
 
 export default function Destination({ destinationsData }) {
 	const tabsHeadingId = "destination-tabs";
-	const tabListData = destinationsData.map((curr) => ({
-		tabName: curr.name,
-		tabContent: <DestinationTab data={curr} />,
-	}));
+	const tabsData = {
+		tabNames: destinationsData.map((curr) => curr.name),
+		tabContents: destinationsData.map((curr) => (
+			<DestinationTab data={curr} />
+		)),
+	};
 
 	return (
 		<>
@@ -28,8 +30,7 @@ export default function Destination({ destinationsData }) {
 				</div>
 				<Tabs
 					tabsHeadingId={tabsHeadingId}
-					tabListData={tabListData}
-					hasVisibleButtonLabel={true}
+					tabsData={tabsData}
 					classNames={{
 						wrapper: styles.tabs,
 						tabList: styles.tabList,
@@ -43,7 +44,7 @@ export default function Destination({ destinationsData }) {
 				<source
 					srcSet="/assets/destination/background-destination-desktop.jpg"
 					type="image/jpeg"
-					media="(min-width: 1024px)"
+					media="(min-width: 1025px)"
 				/>
 				<source
 					srcSet="/assets/destination/background-destination-tablet.jpg"

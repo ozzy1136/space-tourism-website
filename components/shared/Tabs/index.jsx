@@ -3,16 +3,11 @@ import { ReactElement, useState, useRef, useEffect } from "react";
 /**
  * @param {object} props
  * @param {string} props.tabsHeadingId
- * @param {{tabName: string, tabContent: ReactElement}[]} props.tabListData
+ * @param {{tabNames: string[]?, tabAriaLabels: string[]?, tabContents: ReactElement[]}} props.tabsData
  * @param {{wrapper: string, tabList: string, tab: string, tabName: string, tabContentWrapper: string}} props.classNames
  *
  */
-export default function TabList({
-	tabsHeadingId,
-	tabListData,
-	hasVisibleButtonLabel,
-	classNames = {},
-}) {
+export default function TabList({ tabsHeadingId, tabsData, classNames }) {
 	/*
 	 * 	This content is licensed according to the W3C Software License at
 	 * 	https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
@@ -21,17 +16,6 @@ export default function TabList({
 	 *
 	 * 	Desc:   Tablist widget that implements ARIA Authoring Practices
 	 */
-
-	/**
-	 * @type {string[]}
-	 */
-	const tabNames = tabListData.map((curr) => curr.tabName);
-
-	/**
-	 * @type {ReactElement[]}
-	 */
-	const tabContents = tabListData.map((curr) => curr.tabContent);
-
 	const firstTabRef = useRef();
 	const lastTabRef = useRef();
 	const [selectedTabId, setSelectedTabId] = useState();
@@ -110,14 +94,18 @@ export default function TabList({
 				role="tablist"
 				aria-labelledby={tabsHeadingId}
 			>
-				{tabNames.map((tabName, i) => (
+				{tabsData.tabContents.map((_, i) => (
 					<button
 						className={classNames.tab}
 						key={i}
 						id={`tab-${i + 1}`}
 						type="button"
 						role="tab"
-						aria-label={hasVisibleButtonLabel ? undefined : tabName}
+						aria-label={
+							tabsData.hasOwnProperty("tabAriaLabels")
+								? tabsData.tabAriaLabels[i]
+								: undefined
+						}
 						aria-controls={`tabpanel-${i + 1}`}
 						aria-selected={
 							selectedTabId === `tab-${i + 1}` ? "true" : "false"
@@ -130,16 +118,18 @@ export default function TabList({
 						ref={
 							i === 0
 								? firstTabRef
-								: i === tabNames.length - 1
+								: i === tabsData.tabContents.length - 1
 								? lastTabRef
 								: undefined
 						}
 					>
-						{hasVisibleButtonLabel ? tabName : undefined}
+						{tabsData.hasOwnProperty("tabNames")
+							? tabsData.tabNames[i]
+							: null}
 					</button>
 				))}
 			</div>
-			{tabContents.map((tabContent, i) => (
+			{tabsData.tabContents.map((tabContent, i) => (
 				<article
 					className={classNames.tabContentWrapper}
 					key={i}

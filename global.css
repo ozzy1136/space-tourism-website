@@ -134,7 +134,7 @@ body.no-scroll {
 	--page-gap-size: 10vw;
 
 	@media (--viewport-desktop) {
-		--page-gap-size: 14vw;
+		--page-gap-size: 12vw;
 	}
 }
 

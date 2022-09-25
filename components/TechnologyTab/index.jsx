@@ -7,7 +7,7 @@ import styles from "./index.module.css";
 export default function TechnologyTab({ data }) {
 	return (
 		<>
-			<div className={styles.detailsWrapper}>
+			<div className={`center-children ${styles.detailsWrapper}`}>
 				<p className={`text-nav ${styles.subheading}`}>
 					The terminology...
 				</p>

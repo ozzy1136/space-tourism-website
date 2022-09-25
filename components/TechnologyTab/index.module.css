@@ -1,19 +1,27 @@
 .detailsWrapper {
 	grid-column: wrapper;
+	flex-direction: column;
 	text-align: center;
 }
 
 .heading {
 	margin-block-start: 0.4em;
 	margin-block-end: 0.75em;
+
+	@media (--viewport-tablet) {
+		margin-block-end: 0.5em;
+	}
 }
 
 .subheading {
 	color: rgb(var(--c-blue));
-	margin-inline: auto;
 }
 
 .photoWrapper {
 	grid-column: full;
 	grid-row-start: 2;
+}
+
+.photo {
+	width: 100%;
 }

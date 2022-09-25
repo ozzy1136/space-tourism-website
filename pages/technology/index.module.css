@@ -7,6 +7,10 @@
 .headingWrapper {
 	grid-column: wrapper;
 	text-align: center;
+
+	@media (--viewport-tablet) {
+		text-align: start;
+	}
 }
 
 .heading {

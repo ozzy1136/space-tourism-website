@@ -47,7 +47,7 @@ export default function Home() {
 				<img
 					className="page-bg"
 					src="/assets/home/background-home-mobile.jpg"
-					role="presentation"
+					alt=""
 				/>
 			</picture>
 		</>

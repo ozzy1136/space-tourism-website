@@ -9,7 +9,7 @@ export default function Crew({ crewData }) {
 	const tabsHeadingId = "crew-tabs";
 	const tabsData = {
 		tabAriaLabels: crewData.map((curr) => curr.name),
-		tabContents: crewData.map((curr) => <CrewTab data={curr} />),
+		tabContents: crewData.map((curr, i) => <CrewTab key={i} data={curr} />),
 	};
 
 	return (
@@ -52,7 +52,7 @@ export default function Crew({ crewData }) {
 				<img
 					className="page-bg"
 					src="/assets/crew/background-crew-mobile.jpg"
-					role="presentation"
+					alt=""
 				/>
 			</picture>
 		</>

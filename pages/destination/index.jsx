@@ -9,8 +9,8 @@ export default function Destination({ destinationsData }) {
 	const tabsHeadingId = "destination-tabs";
 	const tabsData = {
 		tabNames: destinationsData.map((curr) => curr.name),
-		tabContents: destinationsData.map((curr) => (
-			<DestinationTab data={curr} />
+		tabContents: destinationsData.map((curr, i) => (
+			<DestinationTab key={i} data={curr} />
 		)),
 	};
 
@@ -54,7 +54,7 @@ export default function Destination({ destinationsData }) {
 				<img
 					className="page-bg"
 					src="/assets/destination/background-destination-mobile.jpg"
-					role="presentation"
+					alt=""
 				/>
 			</picture>
 		</>

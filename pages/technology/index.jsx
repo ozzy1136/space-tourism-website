@@ -15,8 +15,8 @@ export default function Technology({ technologyData }) {
 			return res;
 		})(),
 		tabAriaLabels: technologyData.map((curr) => curr.name),
-		tabContents: technologyData.map((curr) => (
-			<TechnologyTab data={curr} />
+		tabContents: technologyData.map((curr, i) => (
+			<TechnologyTab key={i} data={curr} />
 		)),
 	};
 
@@ -60,7 +60,7 @@ export default function Technology({ technologyData }) {
 				<img
 					className="page-bg"
 					src="/assets/technology/background-technology-mobile.jpg"
-					role="presentation"
+					alt=""
 				/>
 			</picture>
 		</>

@@ -76,10 +76,17 @@
 		rgb(var(--c-white)) 20%,
 		transparent 20%
 	);
+	opacity: 18%;
 	border-radius: 50%;
 	cursor: pointer;
 }
 
-.tab[aria-selected="false"] {
-	opacity: 30%;
+.tab[aria-selected="true"] {
+	opacity: 100%;
+}
+
+@media (hover: hover) {
+	.tab[aria-selected="false"]:hover {
+		opacity: 50%;
+	}
 }

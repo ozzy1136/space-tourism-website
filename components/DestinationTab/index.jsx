@@ -18,7 +18,7 @@ export default function DestinationTab({ data }) {
 					/>
 					<img
 						src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${
-							image.png
+							images.png
 						}`}
 						type="image/png"
 						alt={data.name}

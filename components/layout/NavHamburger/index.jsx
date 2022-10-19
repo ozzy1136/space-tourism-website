@@ -33,14 +33,19 @@ export default function NavBar() {
 
 	return (
 		<>
-			<button
-				className={`${styles.hamburgerToggle} ${styles.hamburgerToggleOpen}`}
-				type="button"
-				aria-label="Open site navigation menu"
-				onClick={() => dialog.current.show()}
-			>
-				<IconHamburger />
-			</button>
+			<div className={styles.hamburgerToggleOpen}>
+				<span className="sr-only" id="open-nav-menu">
+					Open site navigation menu
+				</span>
+				<button
+					className={styles.hamburgerToggle}
+					type="button"
+					aria-labelledby="open-nav-menu"
+					onClick={() => dialog.current.show()}
+				>
+					<IconHamburger />
+				</button>
+			</div>
 			<A11yDialog
 				classNames={{
 					container: styles.hamburgerWrapper,

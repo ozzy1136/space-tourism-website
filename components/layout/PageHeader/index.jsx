@@ -8,6 +8,9 @@ export default function PageHeader() {
 	return (
 		<header className={`page-section-container ${styles.wrapper}`}>
 			<div className={styles.logoWrapper}>
+				<span className="sr-only" id="site-logo-title">
+					Space Tourism Logo
+				</span>
 				<Logo className={styles.logoSVG} />
 			</div>
 			<NavHamburger />

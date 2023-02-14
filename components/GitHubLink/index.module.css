@@ -1,0 +1,24 @@
+.wrapper {
+	padding: 0.5em;
+	background-color: rgb(var(--c-white));
+	color: rgb(var(--c-black));
+	position: absolute;
+	left: 50vw;
+	transform: translateX(-50%);
+	z-index: 999;
+
+	@media (--viewport-tablet) {
+		left: 30vw;
+	}
+
+	@media (--viewport-desktop) {
+		left: 25vw;
+	}
+}
+
+.linkLogo {
+	width: 1.5em;
+	height: 1.5em;
+	margin-inline-start: 0.75em;
+	vertical-align: top;
+}
